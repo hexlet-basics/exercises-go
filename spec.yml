@@ -1,0 +1,7 @@
+---
+
+language:
+  docker_image: "hexletbasics/exercises-go"
+  extension: go
+  exercise_filename: main.go
+  exercise_test_filename: main_test.go
