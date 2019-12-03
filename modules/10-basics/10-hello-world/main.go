@@ -1,7 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
-	//BEGIN
-	print("Hello, World!")
-	//END
+	fmt.Print("Hello, World!")
 }
