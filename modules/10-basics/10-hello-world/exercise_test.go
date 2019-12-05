@@ -7,7 +7,7 @@ import (
 )
 
 func ExampleMain() {
-	cmd := exec.Command("go", "run", "main.go")
+	cmd := exec.Command("go", "run", "exercise.go")
 	out, err := cmd.CombinedOutput()
 	if err != nil {
 		log.Fatalf("error on running the command: %v\n", err)

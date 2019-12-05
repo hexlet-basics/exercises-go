@@ -3,5 +3,5 @@
 language:
   docker_image: "hexletbasics/exercises-go"
   extension: go
-  exercise_filename: main.go
-  exercise_test_filename: main_test.go
+  exercise_filename: exercise.go
+  exercise_test_filename: exercise_test.go
