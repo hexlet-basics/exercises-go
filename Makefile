@@ -4,6 +4,9 @@ compose:
 compose-build:
 	docker-compose build
 
+docker-local-build:
+	docker build --tag hexletbasics/exercises-go .
+
 SUBDIRS := $(wildcard modules/**/*/.)
 
 lint:
