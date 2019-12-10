@@ -1,2 +1,2 @@
 test:
-	GOPATH=`pwd` go test hexlet/solution
+	@ . ../../../test.sh
