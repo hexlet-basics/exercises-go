@@ -6,7 +6,7 @@ import (
 	"os/exec"
 )
 
-func ExampleHelloWorld() {
+func ExampleVariables() {
 	cmd := exec.Command("go", "run", "solution.go")
 	out, err := cmd.CombinedOutput()
 	if err != nil {
@@ -14,5 +14,5 @@ func ExampleHelloWorld() {
 	}
 	fmt.Println(string(out))
 	// Output:
-	// Hello, World!
+	// John Smith
 }
