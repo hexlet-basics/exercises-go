@@ -72,4 +72,5 @@ instructions: |
 tips:
   - |
     [Именование пакетов](https://golang.org/doc/code.html#PackageNames)
+  - |
     [Все, что нужно знать о пакетах в Go](https://medium.com/rungo/everything-you-need-to-know-about-packages-in-go-b8bac62b74cc)
