@@ -99,12 +99,6 @@ instructions: |
   Объявите две переменные `firstName` и `lastName`. Переменная `firstName` должна содержать строку "John", переменная `lastName` – "Smith".
   Выведите эти переменные на экран, чтобы получилась строка "John Smith".
 
-  ```go
-  solution.PrintTwice("WoW")
-  // WoW
-  // WoW
-  ```
-
 tips:
   - |
     [Effective Go – Variables](https://golang.org/doc/effective_go.html#variables)
