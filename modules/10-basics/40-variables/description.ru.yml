@@ -97,7 +97,7 @@ theory: |
 
 instructions: |
   Объявите две переменные `firstName` и `lastName`. Переменная `firstName` должна содержать строку "John", переменная `lastName` – "Smith".
-  Выведите эти переменные на экран, чтобы получилось строка "John Smith".
+  Выведите эти переменные на экран, чтобы получилась строка "John Smith".
 
   ```go
   solution.PrintTwice("WoW")
@@ -106,5 +106,3 @@ instructions: |
   ```
 
 tips:
-  - |
-    [Effective Go – Functions](https://golang.org/doc/effective_go.html#functions)
