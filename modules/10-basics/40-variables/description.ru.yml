@@ -106,3 +106,5 @@ instructions: |
   ```
 
 tips:
+  - |
+    [Effective Go – Variables](https://golang.org/doc/effective_go.html#variables)
