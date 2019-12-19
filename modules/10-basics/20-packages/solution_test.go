@@ -1,6 +1,6 @@
 package solution_test
 
-import "hexlet/solution"
+import solution "exercises-go/modules/10-basics/20-packages"
 
 func ExampleHello() {
 	solution.Hello()

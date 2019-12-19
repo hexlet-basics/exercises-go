@@ -1,1 +1,1 @@
-GOPATH=`pwd` go test -race -v hexlet/solution 2>&1
+GOPATH=`pwd` go test -race -v . 2>&1
