@@ -1,1 +1,1 @@
-GOPATH=`pwd` go test . 2>&1
+GOPATH=`pwd` go test -vet=off . 2>&1
