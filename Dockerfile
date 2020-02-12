@@ -11,5 +11,7 @@ RUN apt-get install -yqq jq
 RUN pip3 install yq
 RUN npm install -g ajv-cli
 
+RUN go get -u golang.org/x/lint/golint
+
 WORKDIR /exercises-go
 COPY . .
