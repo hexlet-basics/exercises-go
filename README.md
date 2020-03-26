@@ -6,15 +6,11 @@
 
 ```sh
 # setup
-$ make
+$ make compose-setup
 # run
 $ make compose
 
-# run linters and validators
-$ make compose-code-lint
-$ make compose-description-lint
-$ make compose-schema-validate
-
+# see Makefile for more commands
 ```
 
 ##
