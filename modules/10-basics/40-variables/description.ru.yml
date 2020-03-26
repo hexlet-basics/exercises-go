@@ -101,4 +101,6 @@ instructions: |
 
 tips:
   - |
-    [Про переменные в Go](https://golang.org/doc/effective_go.html#variables)
+    [The Go Programming Language Specification - Variables](https://golang.org/ref/spec#Variables)
+  - |
+    [Effective Go - Variables](https://golang.org/doc/effective_go.html#variables)

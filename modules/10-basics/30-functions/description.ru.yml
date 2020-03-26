@@ -64,4 +64,6 @@ instructions: |
 
 tips:
   - |
+    [The Go Programming Language Specification - Function declarations](https://golang.org/ref/spec#Function_declarations)
+  - |
     [Effective Go - Functions](https://golang.org/doc/effective_go.html#functions)
