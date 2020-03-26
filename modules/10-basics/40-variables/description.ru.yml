@@ -9,7 +9,7 @@ theory: |
   var имя тип = выражение
   ```
 
-  Для именования переменных в Go принято также использовать CamelCase, если имя начинается с заглавной буквы, то переменная является экспортируемой.
+  Для именования переменных в Go также принято использовать CamelCase для экспортируемых переменны и lowerCamelCase для неэкспортируемых переменных.
 
   Например, переменную целого типа можно определить так:
 
@@ -101,4 +101,4 @@ instructions: |
 
 tips:
   - |
-    [Effective Go – Variables](https://golang.org/doc/effective_go.html#variables)
+    [Про переменные в Go](https://golang.org/doc/effective_go.html#variables)
