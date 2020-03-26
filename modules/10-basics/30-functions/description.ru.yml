@@ -62,6 +62,8 @@ instructions: |
   // WoW
   ```
 
+  Так как функция экспортируемая, не забудьте написать комментарий с описанием данной функции.
+
 tips:
   - |
     [The Go Programming Language Specification - Function declarations](https://golang.org/ref/spec#Function_declarations)
