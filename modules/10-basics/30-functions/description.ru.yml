@@ -64,4 +64,4 @@ instructions: |
 
 tips:
   - |
-    [Про функции в Go](https://golang.org/doc/effective_go.html#functions)
+    [Effective Go - Functions](https://golang.org/doc/effective_go.html#functions)
