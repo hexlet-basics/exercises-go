@@ -93,21 +93,21 @@ theory: |
 
   При импорте с точкой все экспортируемые имена пакета становятся доступны в области видимости текущего пакета и к ним можно обращаться без имени импортируемого пакета. Но использовать такой способ не рекомендуется, а если и использовать, то с осторожностью. Например, если у нас будет два пакета с пересекающимися именами, то при импорте через точку мы получим ошибку компиляции.
 
-  Импорт пакета с подчеркиванием может понадобиться тогда, когда необходимо выполнить в нем функцию `init`, но при этом сам пакет в коде нигде не используется. Про функцию `init` можно почитать по ссылке ниже.
+  Импорт пакета с подчеркиванием может понадобиться тогда, когда необходимо выполнить в нем функцию `init`, но при этом сам пакет в коде нигде не используется. Про функцию `init` можно почитать по ссылке ниже в советах.
 
 instructions: |
   Определите пакет `solution` и поместите в него функцию `Hello()`, которая выводит на экран строчку "Hello, World!". Помните, что функция должна быть экспортируемой, чтобы ее можно было вызвать из другого пакета. 
 
 tips:
   - |
-    [Именование пакетов](https://golang.org/doc/code.html#PackageNames)
+    [The Go Blog - Package names](https://blog.golang.org/package-names)
   - |
-    [Импорт локальных пакетов](https://golang.org/doc/code.html#ImportingLocal)
+    [How to Write Go Code - Importing packages from your module](https://golang.org/doc/code.html#ImportingLocal)
   - |
-    [Импорт пакетов из удаленных модулей](https://golang.org/doc/code.html#ImportingRemote)
+    [How to Write Go Code - Importing packages from remote modules](https://golang.org/doc/code.html#ImportingRemote)
   - |
-    [Импорт с подчеркиванием](https://golang.org/doc/effective_go.html#blank_import)
+    [Effective Go - Import for side effect](https://golang.org/doc/effective_go.html#blank_import)
   - |
-    [Функция init](https://golang.org/doc/effective_go.html#init)
+    [Effective Go - The init function](https://golang.org/doc/effective_go.html#init)
   - |
-    [Все, что нужно знать о пакетах в Go](https://medium.com/rungo/everything-you-need-to-know-about-packages-in-go-b8bac62b74cc)
+    [Everything you need to know about Packages in Go](https://medium.com/rungo/everything-you-need-to-know-about-packages-in-go-b8bac62b74cc)
