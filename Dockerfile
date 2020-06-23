@@ -8,5 +8,4 @@ ENV PATH=/root/go/bin:$PATH
 
 WORKDIR /exercises-go
 
-COPY --from=hexletbasics/base-image:latest /tmp/basics/common/* ./
 COPY . .
