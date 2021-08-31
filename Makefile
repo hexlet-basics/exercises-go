@@ -16,3 +16,5 @@ compose-bash:
 
 compose-test:
 	docker-compose run exercises make test
+
+pre-commit: compose compose-test
