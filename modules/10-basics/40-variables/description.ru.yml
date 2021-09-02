@@ -58,7 +58,7 @@ theory: |
   ```go
   package math
 
-  import errors
+  import "errors"
 
   // статичная ошибка
   var errCannotSum = errors.New("cannot sum")
