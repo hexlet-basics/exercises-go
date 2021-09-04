@@ -3,7 +3,7 @@ package solution_test
 import (
 	"testing"
 
-	solution "exercises-go/modules/10-basics/80-strings"
+	solution "exercises-go/modules/10-basics/45-strings"
 
 	"github.com/stretchr/testify/assert"
 )

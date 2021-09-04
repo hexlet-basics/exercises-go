@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"testing"
 
-	solution "exercises-go/modules/10-basics/50-funcs"
+	solution "exercises-go/modules/10-basics/30-funcs"
 )
 
 func TestIntToString(t *testing.T) {
