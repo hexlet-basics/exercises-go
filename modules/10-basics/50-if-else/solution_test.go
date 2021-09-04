@@ -3,7 +3,7 @@ package solution_test
 import (
 	"testing"
 
-	solution "exercises-go/modules/10-basics/90-if-else"
+	solution "exercises-go/modules/10-basics/50-if-else"
 
 	"github.com/stretchr/testify/assert"
 )

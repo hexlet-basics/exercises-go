@@ -3,7 +3,7 @@ package solution_test
 import (
 	"testing"
 
-	solution "exercises-go/modules/10-basics/110-structs"
+	solution "exercises-go/modules/10-basics/60-structs"
 
 	"github.com/stretchr/testify/assert"
 )

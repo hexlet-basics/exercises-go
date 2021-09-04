@@ -69,7 +69,7 @@ theory: |
   type User struct {
   	ID        int64  `json:"id"`
   	Email     string `json:"email"`
-  	FirstName string `json:"first_name" validate:"required"`
+  	FirstName string `json:"first_name"`
   }
 
   func main() {
@@ -95,9 +95,9 @@ theory: |
   )
 
   type User struct {
-  	ID        int64  `json:"id" validate:"required"`
-  	Email     string `json:"email" validate:"required,email"`
-  	FirstName string `json:"first_name" validate:"required"`
+  	ID        int64  `validate:"required"`
+  	Email     string `validate:"required,email"`
+  	FirstName string `validate:"required"`
   }
 
   func main() {
