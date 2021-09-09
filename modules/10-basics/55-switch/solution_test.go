@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMinInt(t *testing.T) {
+func TestModifySpaces(t *testing.T) {
 	a := assert.New(t)
 	a.Equal("-hello-world-", solution.ModifySpaces(" hello world ", "dash"))
 	a.Equal("_how_r_u_doing_", solution.ModifySpaces(" how r u doing ", "underscore"))

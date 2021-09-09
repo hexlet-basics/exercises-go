@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMinInt(t *testing.T) {
+func TestValidate(t *testing.T) {
 	a := assert.New(t)
 	a.Equal("invalid request", solution.Validate(solution.UserCreateRequest{
 		FirstName: "",
