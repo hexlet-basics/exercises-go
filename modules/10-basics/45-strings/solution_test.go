@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMinInt(t *testing.T) {
+func TestGreetings(t *testing.T) {
 	a := assert.New(t)
 	a.Equal("Привет, Иван!", solution.Greetings(" иван"))
 	a.Equal("Привет, Петр!", solution.Greetings("ПЕТР"))

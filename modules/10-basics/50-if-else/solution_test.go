@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMinInt(t *testing.T) {
+func TestDomainForLocale(t *testing.T) {
 	a := assert.New(t)
 	a.Equal("en.code-basics.com", solution.DomainForLocale("code-basics.com", ""))
 	a.Equal("ru.code-basics.com", solution.DomainForLocale("code-basics.com", "ru"))
