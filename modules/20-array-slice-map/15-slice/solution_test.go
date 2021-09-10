@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestSafeWrite(t *testing.T) {
+func TestRemove(t *testing.T) {
 	a := assert.New(t)
 	equalSlices(a, []int{1, 2}, solution.Remove([]int{1, 2}, -1))
 	equalSlices(a, []int{1, 2}, solution.Remove([]int{1, 2}, -5))
