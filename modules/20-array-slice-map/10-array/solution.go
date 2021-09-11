@@ -1,6 +1,5 @@
 package solution
 
-
 // BEGIN
 
 // SafeWrite writes a value val in the array arr if the index i is in the array's boundaries.

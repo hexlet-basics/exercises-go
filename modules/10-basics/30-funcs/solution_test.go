@@ -1,10 +1,8 @@
-package solution_test
+package solution
 
 import (
 	"strconv"
 	"testing"
-
-	solution "exercises-go/modules/10-basics/30-funcs"
 )
 
 func TestIntToString(t *testing.T) {
@@ -28,7 +26,7 @@ func TestIntToString(t *testing.T) {
 
 	for i, tt := range tests {
 		t.Run(strconv.Itoa(i), func(t *testing.T) {
-			if got := solution.IntToString(tt.input); got != tt.want {
+			if got := IntToString(tt.input); got != tt.want {
 				t.Errorf("IntToString() = %v, want %v", got, tt.want)
 			}
 		})
