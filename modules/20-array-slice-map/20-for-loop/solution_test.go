@@ -1,7 +1,6 @@
-package solution_test
+package solution
 
 import (
-	solution "exercises-go/modules/20-array-slice-map/20-for-loop"
 	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"
@@ -21,6 +20,6 @@ func testMap(a *assert.Assertions, expected, input []string, mapFunc func(s stri
 	inputCopy := make([]string, len(input))
 	copy(inputCopy, input)
 
-	a.Equal(expected, solution.Map(input, mapFunc))
+	a.Equal(expected, Map(input, mapFunc))
 	a.Equal(inputCopy, input) // check that the initial slice hasn't been modified.
 }

@@ -1,6 +1,5 @@
 package solution
 
-
 // BEGIN
 
 // Remove removes an item from the nums slice by index i.
