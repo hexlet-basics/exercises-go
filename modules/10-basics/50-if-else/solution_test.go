@@ -1,16 +1,14 @@
-package solution_test
+package solution
 
 import (
 	"testing"
-
-	solution "exercises-go/modules/10-basics/50-if-else"
 
 	"github.com/stretchr/testify/assert"
 )
 
 func TestDomainForLocale(t *testing.T) {
 	a := assert.New(t)
-	a.Equal("en.code-basics.com", solution.DomainForLocale("code-basics.com", ""))
-	a.Equal("ru.code-basics.com", solution.DomainForLocale("code-basics.com", "ru"))
-	a.Equal("vn.code-basics.com", solution.DomainForLocale("code-basics.com", "vn"))
+	a.Equal("en.code-basics.com", DomainForLocale("code-basics.com", ""))
+	a.Equal("ru.code-basics.com", DomainForLocale("code-basics.com", "ru"))
+	a.Equal("vn.code-basics.com", DomainForLocale("code-basics.com", "vn"))
 }

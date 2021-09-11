@@ -1,1 +1,1 @@
-go test -vet=off -race . 2>&1
+go test -vet=off . 2>&1

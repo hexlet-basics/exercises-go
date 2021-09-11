@@ -1,16 +1,13 @@
-package solution_test
+package solution
 
 import (
 	"testing"
-
-	solution "exercises-go/modules/10-basics/45-strings"
-
 	"github.com/stretchr/testify/assert"
 )
 
 func TestGreetings(t *testing.T) {
 	a := assert.New(t)
-	a.Equal("Привет, Иван!", solution.Greetings(" иван"))
-	a.Equal("Привет, Петр!", solution.Greetings("ПЕТР"))
-	a.Equal("Привет, Василий!", solution.Greetings("     вАсиЛИЙ       "))
+	a.Equal("Привет, Иван!", Greetings(" иван"))
+	a.Equal("Привет, Петр!", Greetings("ПЕТР"))
+	a.Equal("Привет, Василий!", Greetings("     вАсиЛИЙ       "))
 }

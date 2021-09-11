@@ -1,17 +1,14 @@
-package solution_test
+package solution
 
 import (
 	"testing"
-
-	solution "exercises-go/modules/10-basics/40-bool"
-
 	"github.com/stretchr/testify/assert"
 )
 
 func TestValid(t *testing.T) {
 	a := assert.New(t)
-	a.Equal(false, solution.Valid(0, ""))
-	a.Equal(false, solution.Valid(5, ""))
-	a.Equal(false, solution.Valid(0, "hey!"))
-	a.Equal(true, solution.Valid(10, "hey!"))
+	a.False(Valid(0, ""))
+	a.False(Valid(5, ""))
+	a.False(Valid(0, "hey!"))
+	a.True(Valid(10, "hey!"))
 }
