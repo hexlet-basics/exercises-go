@@ -5,10 +5,10 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestValid(t *testing.T) {
+func TestIsValid(t *testing.T) {
 	a := assert.New(t)
-	a.False(Valid(0, ""))
-	a.False(Valid(5, ""))
-	a.False(Valid(0, "hey!"))
-	a.True(Valid(10, "hey!"))
+	a.False(IsValid(0, ""))
+	a.False(IsValid(5, ""))
+	a.False(IsValid(0, "hey!"))
+	a.True(IsValid(10, "hey!"))
 }
