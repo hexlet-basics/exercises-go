@@ -23,7 +23,7 @@ theory: |
   ```go
   package math
 
-  // публичная функция, можно вызвать извне как math.MultiplyNumbers(5,7)
+  // публичная функция, можно вызвать извне как math.Multiply(5,7)
   func Multiply(x int, y int) int {
   	...
   }
