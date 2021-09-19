@@ -11,12 +11,10 @@ compose:
 compose-build:
 	docker compose build
 
-compose-go-mod:
-	docker compose run exercises go mod init exercises || exit 0
-	docker compose run exercises go mod vendor
-
 compose-bash:
 	docker compose run exercises bash
 
 compose-test:
 	docker compose run exercises make test
+
+compose-build-test: compose-build compose
