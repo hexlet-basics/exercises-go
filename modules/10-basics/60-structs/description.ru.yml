@@ -126,7 +126,7 @@ instructions: |
 
   ```go
   type UserCreateRequest struct {
-    FirstName string // не может быть пустым; не может содержать больше одного слова
+    FirstName string // не может быть пустым; не может содержать пробелы
     Age int // не может быть 0 или отрицательным; не может быть больше 150
   }
   ```
