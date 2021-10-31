@@ -10,7 +10,7 @@ func shiftASCII(s string, step int) string {
 
 	shifted := make([]byte, len(s))
 	for i := 0; i < len(s); i++ {
-		shifted[i] = byte(int(s[i])+step)
+		shifted[i] = byte(int(s[i]) + step)
 	}
 
 	return string(shifted)
