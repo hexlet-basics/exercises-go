@@ -19,7 +19,7 @@ theory: |
   m := map[int]string{1: "hello", 2: "world"}
 
   // добавление элемента
-  m[3] := "!" // map[1:hello, 2:world, 3:!]
+  m[3] = "!" // map[1:hello, 2:world, 3:!]
 
   // чтение элемента
   word := m[1] // "hello"
