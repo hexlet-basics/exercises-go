@@ -109,7 +109,7 @@ instructions: |
   cp := CopyParent(p)
 
   // при мутациях в копии "cp" изначальная структура "p" не изменяется
-  cp.Children = nil
+  cp.Children[0] = Child{}
   fmt.Println(p.Children) // [{Andy 18}]
   ```
 
