@@ -8,18 +8,21 @@ type ListNode struct {
 
 // BEGIN
 
-// ReverseList reverses given linked list
-func ReverseList(head *ListNode) *ListNode {
+// Reverse reverses the linked list
+func (head *ListNode) Reverse() *ListNode {
+	if head == nil {
+		return nil
+	}
+
 	var r *ListNode
 
-	curr := head
+	curr := &(*head)
 	for curr != nil {
-		next := curr.Next
-
-		curr.Next = r
-		r = curr
-
-		curr = next
+		r = &ListNode{
+			Next: r,
+			Val:  curr.Val,
+		}
+		curr = curr.Next
 	}
 
 	return r

@@ -7,7 +7,42 @@ import (
 
 func TestReverseList(t *testing.T) {
 	a := assert.New(t)
-	a.Nil(ReverseList(nil))
+
+	var l *ListNode
+
+	a.Nil(l.Reverse())
+
+	l = &ListNode{
+		Next: &ListNode{
+			Next: &ListNode{
+				Next: &ListNode{
+					Next: nil,
+					Val:  40,
+				},
+				Val: 30,
+			},
+			Val: 20,
+		},
+		Val: 10,
+	}
+
+	rev := l.Reverse()
+
+	// initial list should be the same after the reversion
+	a.Equal(&ListNode{
+		Next: &ListNode{
+			Next: &ListNode{
+				Next: &ListNode{
+					Next: nil,
+					Val:  40,
+				},
+				Val: 30,
+			},
+			Val: 20,
+		},
+		Val: 10,
+	}, l)
+
 	a.Equal(&ListNode{
 		Next: &ListNode{
 			Next: &ListNode{
@@ -20,17 +55,5 @@ func TestReverseList(t *testing.T) {
 			Val: 30,
 		},
 		Val: 40,
-	}, ReverseList(&ListNode{
-		Next: &ListNode{
-			Next: &ListNode{
-				Next: &ListNode{
-					Next: nil,
-					Val:  40,
-				},
-				Val: 30,
-			},
-			Val: 20,
-		},
-		Val: 10,
-	}))
+	}, rev)
 }
