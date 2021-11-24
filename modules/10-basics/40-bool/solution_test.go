@@ -12,6 +12,6 @@ func TestIsValid(t *testing.T) {
 	a.False(IsValid(5, ""))
 	a.False(IsValid(-3, ""))
 	a.False(IsValid(0, "hey!"))
-	a.True(IsValid(-10, "hey!"))
+	a.False(IsValid(-10, "hey!"))
 	a.True(IsValid(10, "hey!"))
 }
