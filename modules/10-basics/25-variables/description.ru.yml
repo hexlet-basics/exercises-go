@@ -80,8 +80,7 @@ theory: |
 
 instructions: |
   Объявите две переменные `firstName` и `lastName`. Переменная `firstName` должна содержать строку «John», переменная `lastName` — «Smith».
-  Соедините эти переменные в одну: `fullName`, чтобы получилась строка «John Smith».
-  Выведите значение переменной `fullName` при помощи функции `Print` из пакета `fmt`
+  Выведите значения переменных `firstName` и `lastName` через пробел, чтобы получилась строка «John Smith». Используйте функцию `Println` из пакета `fmt`
 
 tips:
   - |
