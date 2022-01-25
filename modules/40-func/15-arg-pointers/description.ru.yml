@@ -26,7 +26,7 @@ theory: |
   func main() {
   	u := User{}
 
-  	// передаем указатель с помощью амперсанта & перед переменной
+  	// передаем указатель с помощью амперсанда & перед переменной
   	fillUserData(&u, "test@test.com", "qwerty")
 
   	fmt.Printf("points on func call %+v\n", u) // points on func call {email:test@test.com password:qwerty}
@@ -36,7 +36,7 @@ theory: |
 
   	fillUserData(up, "test@test.com", "qwerty")
 
-  	fmt.Printf("points on init %+v\n", u) // points on init {email:test@test.com password:qwerty}
+  	fmt.Printf("points on init %+v\n", up) // points on init {email:test@test.com password:qwerty}
   }
 
   ```
