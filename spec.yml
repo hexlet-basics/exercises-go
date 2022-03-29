@@ -7,4 +7,4 @@ language:
   exercise_test_filename: solution_test.go
   learn_as: second_language
   progress: completed
-  name: GO
+  name: Go
