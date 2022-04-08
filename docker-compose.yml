@@ -5,6 +5,5 @@ version: '3'
 services:
   exercises:
     build: .
-    volumes:
-      - .:/exercises-go
+    image: hexletbasics/exercises-go:cached
     command: make check
