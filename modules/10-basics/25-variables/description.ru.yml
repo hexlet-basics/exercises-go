@@ -84,6 +84,6 @@ instructions: |
 
 tips:
   - |
-    [The Go Programming Language Specification - Variables](https://golang.org/ref/spec#Variables)
+    [The Go Programming Language Specification - Variables](https://go.dev/ref/spec#Variables)
   - |
-    [Effective Go - Variables](https://golang.org/doc/effective_go.html#variables)
+    [Effective Go - Variables](https://go.dev/doc/effective_go#variables)
