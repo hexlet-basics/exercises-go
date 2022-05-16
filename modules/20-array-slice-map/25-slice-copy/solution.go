@@ -17,7 +17,7 @@ func IntsCopy(src []int, maxLen int) []int {
 	cp := make([]int, maxLen)
 	copy(cp, src)
 
-	return cp[:maxLen]
+	return cp
 }
 
 // END
