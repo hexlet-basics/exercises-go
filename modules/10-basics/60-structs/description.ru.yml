@@ -133,4 +133,4 @@ instructions: |
 
 tips:
   - |
-    [The Go Programming Language Specification — Struct types](https://golang.org/ref/spec#Struct_types)
+    [The Go Programming Language Specification — Struct types](https://go.dev/ref/spec#Struct_types)
