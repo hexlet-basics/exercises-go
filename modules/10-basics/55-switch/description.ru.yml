@@ -71,4 +71,4 @@ instructions: |
 
 tips:
   - |
-    [The Go Programming Language Specification — Switch statements](https://golang.org/ref/spec#Switch_statements)
+    [The Go Programming Language Specification — Switch statements](https://go.dev/ref/spec#Switch_statements)
