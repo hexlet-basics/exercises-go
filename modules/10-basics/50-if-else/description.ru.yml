@@ -27,7 +27,7 @@ theory: |
   	} else if strings.HasPrefix(name, "Mrs.") {
   		return "married woman"
   	} else {
-  		return "man"
+  		return "Single person"
   	}
   }
 
