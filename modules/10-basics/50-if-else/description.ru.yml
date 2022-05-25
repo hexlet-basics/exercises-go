@@ -39,7 +39,7 @@ theory: |
   	fmt.Println(n + " is a " + statusByName(n)) // Mrs. Berry is a married woman
 
   	n = "Karl"
-  	fmt.Println(n + " is a " + statusByName(n)) // Karl is a man
+  	fmt.Println(n + " is a " + statusByName(n)) // Karl is a single person
   }
   ```
 
