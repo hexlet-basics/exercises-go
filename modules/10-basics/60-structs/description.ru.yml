@@ -131,6 +131,8 @@ instructions: |
   }
   ```
 
+  Наличие пробелов можно проверить с помощью функции `strings.Contains(firstName, " ")`.
+
 tips:
   - |
     [The Go Programming Language Specification — Struct types](https://go.dev/ref/spec#Struct_types)
