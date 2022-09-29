@@ -44,6 +44,8 @@ instructions: |
   latinLetters("привет world!") // "world"
   ```
 
+  Для решения задачи можно использовать метод `Is()` и одну из переменных, соответствующую латинским символам, из модуля [unicode](https://pkg.go.dev/unicode).
+
 tips:
   - |
     [Go standard package — strings](https://pkg.go.dev/strings)
