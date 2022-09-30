@@ -2,21 +2,19 @@ package solution
 
 import (
 	"strings"
+	"unicode"
 )
 
-// BEGIN
-
-// latinLetters returns only latin letters from the string s filtering all other chars.
+// BEGIN (write your solution here)
 func latinLetters(s string) string {
 	sb := &strings.Builder{}
 
 	for _, r := range s {
-		if (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z') {
+		if unicode.Is(unicode.Latin, r)  {
 			sb.WriteRune(r)
 		}
-	}
+    }
 
-	return sb.String()
+    return sb.String()
 }
-
 // END
