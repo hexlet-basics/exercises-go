@@ -1,7 +1,7 @@
 -include /opt/basics/common/common.mk
 
 code-lint:
-	golint -set_exit_status modules/...
+	revive -set_exit_status -formatter stylish -config revive.toml modules/...
 
 code-format:
 	gofmt -s -w modules
