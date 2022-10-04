@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"log"
 	"os/exec"
+	"testing"
 )
 
-func ExampleGoGoGo() {
+func TestGoGoGo(t *testing.T) {
 	cmd := exec.Command("go", "run", "solution.go")
 	out, err := cmd.CombinedOutput()
 	if err != nil {

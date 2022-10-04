@@ -1,7 +1,7 @@
 -include /opt/basics/common/common.mk
 
 code-lint:
-	revive -set_exit_status -formatter stylish -config revive.toml modules/...
+	golangci-lint run modules/...
 
 code-format:
 	gofmt -s -w modules

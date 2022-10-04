@@ -5,12 +5,13 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"golang.org/x/text/cases"
 )
 
 func TestMap(t *testing.T) {
 	a := assert.New(t)
 	testMap(a, []string{"John", "Peter", "Fedor"}, []string{"john", "peter", "fedor"}, func(s string) string {
-		return strings.Title(s)
+		return cases.Title(s)
 	})
 	testMap(a, []string{"hello", "world"}, []string{"HELLO", "WORLD"}, func(s string) string {
 		return strings.ToLower(s)
