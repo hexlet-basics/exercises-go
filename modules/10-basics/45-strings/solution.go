@@ -5,6 +5,7 @@ import (
 	"strings"
 
 	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
 )
 
 // BEGIN
@@ -13,7 +14,7 @@ import (
 func Greetings(name string) string {
 	name = strings.Trim(name, " ")
 	name = strings.ToLower(name)
-	name = cases.Title(name)
+	name = cases.Title(language.Russian).String(name)
 
 	return fmt.Sprintf("Привет, %s!", name)
 }
