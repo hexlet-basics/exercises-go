@@ -3,9 +3,6 @@ package solution
 import (
 	"fmt"
 	"strings"
-
-	"golang.org/x/text/cases"
-	"golang.org/x/text/language"
 )
 
 // BEGIN
@@ -14,7 +11,7 @@ import (
 func Greetings(name string) string {
 	name = strings.Trim(name, " ")
 	name = strings.ToLower(name)
-	name = cases.Title(language.Russian).String(name)
+	name = strings.Title(name) //nolint
 
 	return fmt.Sprintf("Привет, %s!", name)
 }
