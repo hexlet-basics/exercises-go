@@ -100,7 +100,7 @@ theory: |
   }
 
   func main() {
-    cars := []IDriveable{new(Car), new(PoliceCar)}
+    cars := []IDriveable{&Car{}, &PoliceCar{}}
     for _, vehicle := range cars {
         vehicle.Drive()
         // Просто еду по дороге
