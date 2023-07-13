@@ -1,31 +1,29 @@
 package solution
 
-// ListNode is a node of a linked list.
-type ListNode struct {
-	Next *ListNode
-	Val  int
+type Counter struct {
+	Value int
+}
+
+func Max(x, y int) int {
+	if x < y {
+		return y
+	}
+	return x
 }
 
 // BEGIN
-
-// Reverse reverses the linked list
-func (head *ListNode) Reverse() *ListNode {
-	if head == nil {
-		return nil
+func (c *Counter) Inc(delta int) {
+	if delta == 0 {
+		delta = 1
 	}
+	c.Value = Max(c.Value+delta, 0)
+}
 
-	var r *ListNode
-
-	curr := head
-	for curr != nil {
-		r = &ListNode{
-			Next: r,
-			Val:  curr.Val,
-		}
-		curr = curr.Next
+func (c *Counter) Dec(delta int) {
+	if delta == 0 {
+		delta = 1
 	}
-
-	return r
+	c.Inc(-delta)
 }
 
 // END

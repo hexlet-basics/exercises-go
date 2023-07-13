@@ -1,59 +1,36 @@
 package solution
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func TestReverseList(t *testing.T) {
+func TestIncDec(t *testing.T) {
 	a := assert.New(t)
 
-	var l *ListNode
+	c := Counter{}
+	c.Inc(0)
+	c.Inc(0)
+	c.Inc(40)
+	a.Equal(c.Value, 42)
+	c.Dec(0)
+	c.Dec(30)
+	a.Equal(c.Value, 11)
+	c.Dec(100)
+	// Counter value cannot be negative
+	a.Equal(c.Value, 0)
+}
 
-	a.Nil(l.Reverse())
+func TestCounterIndependence(t *testing.T) {
+	a := assert.New(t)
 
-	l = &ListNode{
-		Next: &ListNode{
-			Next: &ListNode{
-				Next: &ListNode{
-					Next: nil,
-					Val:  40,
-				},
-				Val: 30,
-			},
-			Val: 20,
-		},
-		Val: 10,
-	}
+	c1 := Counter{}
+	c2 := Counter{}
 
-	rev := l.Reverse()
+	c1.Inc(10)
+	c2.Inc(20)
 
-	// initial list should be the same after the reversion
-	a.Equal(&ListNode{
-		Next: &ListNode{
-			Next: &ListNode{
-				Next: &ListNode{
-					Next: nil,
-					Val:  40,
-				},
-				Val: 30,
-			},
-			Val: 20,
-		},
-		Val: 10,
-	}, l)
-
-	a.Equal(&ListNode{
-		Next: &ListNode{
-			Next: &ListNode{
-				Next: &ListNode{
-					Next: nil,
-					Val:  10,
-				},
-				Val: 20,
-			},
-			Val: 30,
-		},
-		Val: 40,
-	}, rev)
+	a.Equal(c1.Value, 10)
+	a.Equal(c2.Value, 20)
 }
