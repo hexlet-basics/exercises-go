@@ -35,6 +35,23 @@ theory: |
   idExists, elementExists := existedIDs[225] // false, false
   ```
 
+  Для проверки существования ключа можно использовать мапу с пустыми структурами
+
+  ```go
+  // пустая структура struct{} — это тип данных, который занимает 0 байт
+  // используется, когда нужно проверять в мапе только наличие ключа
+  cache := make(map[int64]struct{})
+
+  // проверяем есть ли ключ `key` в мапе
+  _, ok = cache['key']
+  Println.out(ok)  // false
+
+  // добавим ключ и проверим вновь
+  cache['key'] = struct{}{}
+  _, ok = cache['key']
+  Println.out(ok)  // true
+  ```
+
   Элементы удаляются с помощью встроенной функции `delete(m map[Type]Type1, key Type)`:
 
   ```go
