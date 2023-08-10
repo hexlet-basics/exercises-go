@@ -40,15 +40,15 @@ theory: |
   ```go
   // пустая структура struct{} — это тип данных, который занимает 0 байт
   // используется, когда нужно проверять в мапе только наличие ключа
-  cache := make(map[int64]struct{})
+  cache := make(map[string]struct{})
 
   // проверяем есть ли ключ `key` в мапе
-  _, ok = cache['key']
+  _, ok := cache["key"]
   Println.out(ok)  // false
 
   // добавим ключ и проверим вновь
-  cache['key'] = struct{}{}
-  _, ok = cache['key']
+  cache["key"] = struct{}{}
+  _, ok = cache["key"]
   Println.out(ok)  // true
   ```
 
