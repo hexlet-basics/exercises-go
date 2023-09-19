@@ -28,11 +28,12 @@ theory: |
   При чтении элемента по несуществующему ключу возвращается нулевое значение данного типа. Это приводит к ошибкам логики, когда используется `bool` как значение. Для решения данной проблемы при чтении используется вторая переменная, в которую записывается наличие элемента в мапе:
 
   ```go
-  existedIDs := map[int64]bool{1: true, 2: true}
+  elements := map[int64]bool{1: true, 2: true}
 
-  idExists, elementExists := existedIDs[2] // true, true
+  element, elementExists := elements[1] // true, true
+  element, elementExists := elements[2] // true, true
 
-  idExists, elementExists := existedIDs[225] // false, false
+  element, elementExists := elements[225] // false, false
   ```
 
   Для проверки существования ключа можно использовать мапу с пустыми структурами
@@ -41,15 +42,15 @@ theory: |
   // пустая структура struct{} — это тип данных, который занимает 0 байт
   // используется, когда нужно проверять в мапе только наличие ключа
   cache := make(map[string]struct{})
-
+  
   // проверяем есть ли ключ `key` в мапе
-  _, ok := cache["key"]
-  Println.out(ok)  // false
+  _, ok = cache["key"]
+  fmt.Println(ok)  // false
 
   // добавим ключ и проверим вновь
   cache["key"] = struct{}{}
   _, ok = cache["key"]
-  Println.out(ok)  // true
+  fmt.Println(ok)  // true
   ```
 
   Элементы удаляются с помощью встроенной функции `delete(m map[Type]Type1, key Type)`:
