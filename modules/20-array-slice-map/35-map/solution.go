@@ -10,7 +10,8 @@ func UniqueUserIDs(userIDs []int64) []int64 {
 
 	uniqUserIDs := make([]int64, 0)
 	for _, uid := range userIDs {
-		if _, ok := processed[uid]; ok {
+		_, is_exists := processed[uid]
+		if is_exists {
 			continue
 		}
 
