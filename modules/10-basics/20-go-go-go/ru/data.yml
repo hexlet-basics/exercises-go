@@ -1,0 +1,7 @@
+name: Go, Go, Go
+tips:
+  - |
+    [Стандартные пакеты в Go](https://pkg.go.dev/std)
+  - >
+    [Awesome Go — библиотеки и
+    фреймворки](https://github.com/avelino/awesome-go)

@@ -1,0 +1,5 @@
+name: Пользовательские типы и методы
+tips:
+  - >
+    [The Go Programming Language Specification — Type
+    Declarations](https://golang.org/ref/spec#Type_declarations)

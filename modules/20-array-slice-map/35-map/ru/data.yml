@@ -1,0 +1,11 @@
+name: Мапа
+tips:
+  - >
+    [The Go Programming Language Specification — Map
+    types](https://golang.org/ref/spec#Map_types)
+  - >
+    [The Go Programming Language Specification — Making
+    maps](https://golang.org/ref/spec#Making_slices_maps_and_channels)
+  - >
+    [The Go Programming Language Specification — Deleting map
+    elements](https://golang.org/ref/spec#Deletion_of_map_elements)

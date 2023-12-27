@@ -1,0 +1,4 @@
+name: Горутины
+tips:
+  - |
+    [Effective Go — Goroutines](https://golang.org/doc/effective_go#goroutines)

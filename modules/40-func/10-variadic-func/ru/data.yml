@@ -1,0 +1,5 @@
+name: Вариативные функции
+tips:
+  - >
+    [The Go Programming Language Specification — Function
+    types](https://golang.org/ref/spec#Function_types)
