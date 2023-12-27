@@ -1,0 +1,5 @@
+name: Цикл for
+tips:
+  - >
+    [The Go Programming Language Specification — For
+    statement](https://golang.org/ref/spec#For_statements)

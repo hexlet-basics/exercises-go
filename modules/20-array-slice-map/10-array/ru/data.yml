@@ -1,0 +1,5 @@
+name: Массивы
+tips:
+  - >
+    [The Go Programming Language Specification — Array
+    types](https://golang.org/ref/spec#Array_types)

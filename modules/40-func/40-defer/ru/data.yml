@@ -1,0 +1,5 @@
+name: Отложенные функции
+tips:
+  - >
+    [The Go Programming Language Specification — Defer
+    statements](https://golang.org/ref/spec#Defer_statements)

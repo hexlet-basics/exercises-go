@@ -1,0 +1,4 @@
+name: Сортировка слайсов
+tips:
+  - |
+    [Стандартные пакеты в Go — sort](https://pkg.go.dev/sort)

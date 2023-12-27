@@ -1,0 +1,5 @@
+name: Структуры
+tips:
+  - >
+    [The Go Programming Language Specification — Struct
+    types](https://go.dev/ref/spec#Struct_types)

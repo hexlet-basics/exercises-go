@@ -1,0 +1,5 @@
+name: Методы структур
+tips:
+  - >
+    [The Go Programming Language Specification — Method
+    Declarations](https://golang.org/ref/spec#Method_declarations)

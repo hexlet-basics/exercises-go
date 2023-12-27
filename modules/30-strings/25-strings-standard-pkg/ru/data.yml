@@ -1,0 +1,4 @@
+name: Стандартный пакет strings
+tips:
+  - |
+    [Go standard package — strings](https://pkg.go.dev/strings)

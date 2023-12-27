@@ -1,0 +1,13 @@
+name: Привет, Мир!
+tips:
+  - >
+    [play.golang.org](https://play.golang.org/) — здесь вы можете
+    экспериментировать с кодом на Go.
+  - |
+    [The Go Programming Language Specification](https://golang.org/ref/spec)
+  - |
+    [Go Wiki](https://github.com/golang/go/wiki)
+  - |
+    [How to Write Go Code](https://golang.org/doc/code.html)
+  - |
+    [Effective Go](https://golang.org/doc/effective_go.html)
