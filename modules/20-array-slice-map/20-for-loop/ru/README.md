@@ -62,21 +62,54 @@ for i := 0; i < 10; i++ {
 fmt.Println(nums) // [0 2 4 6 8]
 ```
 
-Для обхода коллекции в Go есть "синтаксический сахар" `range`. Эта конструкция обходит слайс, возвращая индекс и элемент на каждом шаге:
+Для обхода коллекции в Go есть "синтаксический сахар" `range`. Эта конструкция обходит слайс, возвращая пару - индекс и элемент на каждом шаге:
 
 ```go
 names := []string{"John", "Harold", "Vince"}
 
 // i — это индекс, name — это значение на текущем шаге цикла
 for i, name := range names {
-	fmt.Println("Hello ", name, " at index ", i)
+    fmt.Println("Hello ", name, " at index ", i)
+}
+
+// => Hello  John  at index  0
+// => Hello  Harold  at index  1
+// => Hello  Vince  at index  2
+```
+
+Если пропустить вторую переменную, то получим только индексы:
+
+```go
+for i := range names {
+    fmt.Println("index = ", i)
+}
+
+// => index =  0
+// => index =  1
+// => index =  2
+```
+
+Можно пропустить первую переменную, это можно сделать с помощью `_`:
+
+```go
+for _, name := range names {
+    fmt.Println("Hello ", name)
+}
+
+// => Hello  John
+// => Hello  Harold
+// => Hello  Vince
+```
+
+Пропуск сразу двух переменных не сработает. На этапе компиляции произойдет ошибка:
+
+```go
+for _,_ := range names {
+    fmt.Println("Nothing")
 }
 ```
 
-Вывод:
-
-```go
-Hello  John  at index  0
-Hello  Harold  at index  1
-Hello  Vince  at index  2
+```text
+# command-line-arguments
+./main.go:21:14: no new variables on left side of :=
 ```
