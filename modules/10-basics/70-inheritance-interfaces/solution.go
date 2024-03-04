@@ -1,6 +1,6 @@
 package solution
 
-type IVoiceable interface {
+type Voicer interface {
     Voice() string
 }
 
