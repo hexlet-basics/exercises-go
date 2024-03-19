@@ -59,7 +59,7 @@ instructions: |
 
   ```go
   // обрезает символы, переданные вторым аргументом, с обеих сторон строки
-  Trim(s, cutset string) string
+  strings.Trim(s, cutset string) string
   // пример
   strings.Trim(" hello ", " ") // "hello"
 
