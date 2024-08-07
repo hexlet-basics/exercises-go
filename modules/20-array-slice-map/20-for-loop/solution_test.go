@@ -1,6 +1,8 @@
 package solution
 
 import (
+	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
 	"strings"
 	"testing"
 
@@ -10,7 +12,7 @@ import (
 func TestMap(t *testing.T) {
 	a := assert.New(t)
 	testMap(a, []string{"John", "Peter", "Fedor"}, []string{"john", "peter", "fedor"}, func(s string) string {
-		return strings.Title(s) //nolint
+		return cases.Title(language.English).String(s)
 	})
 	testMap(a, []string{"hello", "world"}, []string{"HELLO", "WORLD"}, func(s string) string {
 		return strings.ToLower(s)
