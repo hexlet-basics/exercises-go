@@ -2,15 +2,14 @@ package solution
 
 // BEGIN
 
-// Remove removes an item from the nums slice by index i.
-func Remove(nums []int, i int) []int {
-	if i < 0 || i > len(nums)-1 {
-		return nums
+func Reverse(slice []int) []int {
+	reversed := make([]int, len(slice))
+
+	for i := len(slice) - 1; i >= 0; i-- {
+		reversed[len(slice)-1-i] = slice[i]
 	}
 
-	nums[i] = nums[len(nums)-1]
-
-	return nums[:len(nums)-1]
+	return reversed
 }
 
 // END
