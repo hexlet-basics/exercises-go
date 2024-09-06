@@ -29,8 +29,8 @@ switch { // выражение отсутствует. Для компилято
 	case x == 10:
 		fmt.Println("equal 10 case")
 		fallthrough
-	case x <= 10:
-		fmt.Println("less or equal 10 case")
+	case x < 10:
+		fmt.Println("less 10 case")
 }
 ```
 
