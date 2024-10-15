@@ -18,10 +18,10 @@ const (
 // ErrorMessageToCode returns a gRPC error code depending on error message.
 func ErrorMessageToCode(msg string) int {
 	switch msg {
-	case OkMsg:
-		return OkCode
-	case CancelledMsg:
-		return CancelledCode
+        case OkMsg:
+            return OkCode
+        case CancelledMsg:
+            return CancelledCode
 	}
 
 	return UnknownCode
