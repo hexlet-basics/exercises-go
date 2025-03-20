@@ -3,6 +3,6 @@
 Реализуйте функцию `DomainForLocale(domain, locale string) string`, которая добавляет язык `locale` как поддомен к домену `domain`. Язык может прийти пустым, тогда нужно добавить поддомен *en.*. Например:
 
 ```go
-DomainForLocale("site.com", "") // en.site.com
+DomainForLocale("site.com", "")   // en.site.com
 DomainForLocale("site.com", "ru") // ru.site.com
 ```

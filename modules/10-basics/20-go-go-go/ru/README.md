@@ -40,13 +40,13 @@ func DecodeJSON(rawMsg string) (Message, error) {
 func main() {
 	msg, err := DecodeJSON("")
 	if errors.Is(err, errEmptyMessage) {
-	    // { } empty message
+		// { } empty message
 		fmt.Println(msg, err)
 	}
 
 	msg, err = DecodeJSON("hello")
 	if err != nil {
-	    // { } unmarshal: invalid character 'h' looking for beginning of value
+		// { } unmarshal: invalid character 'h' looking for beginning of value
 		fmt.Println(msg, err)
 	}
 

@@ -19,7 +19,7 @@ func main() {
 
 Вывод:
 
-```
+```text
 h
 e
 l

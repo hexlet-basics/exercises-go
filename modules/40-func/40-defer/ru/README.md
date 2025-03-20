@@ -42,7 +42,7 @@ func main() {
 
 Вывод:
 
-```go
+```text
 1st
 2nd
 3rd

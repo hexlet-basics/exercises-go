@@ -53,7 +53,7 @@ func main() {
 
 Вывод:
 
-```go
+```text
 simple struct: {Andy 18}
 detailed struct: {Name:Andy Age:18}
 Golang struct: main.Person{Name:"Andy", Age:18}

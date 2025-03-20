@@ -8,5 +8,5 @@ sumCh := make(chan int)
 go SumWorker(numsCh, sumCh)
 numsCh <- []int{10, 10, 10}
 
-res := <- sumCh // 30
+res := <-sumCh // 30
 ```

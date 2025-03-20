@@ -52,7 +52,7 @@ nums := make([]int, 0, 10)
 
 // добавляем только четные числа в слайс
 for i := 0; i < 10; i++ {
-	if i % 2 != 0 {
+	if i%2 != 0 {
 		continue
 	}
 
@@ -69,7 +69,7 @@ names := []string{"John", "Harold", "Vince"}
 
 // i — это индекс, name — это значение на текущем шаге цикла
 for i, name := range names {
-    fmt.Println("Hello ", name, " at index ", i)
+	fmt.Println("Hello ", name, " at index ", i)
 }
 
 // => Hello  John  at index  0
@@ -81,7 +81,7 @@ for i, name := range names {
 
 ```go
 for i := range names {
-    fmt.Println("index = ", i)
+	fmt.Println("index = ", i)
 }
 
 // => index =  0
@@ -93,7 +93,7 @@ for i := range names {
 
 ```go
 for _, name := range names {
-    fmt.Println("Hello ", name)
+	fmt.Println("Hello ", name)
 }
 
 // => Hello  John
@@ -104,8 +104,8 @@ for _, name := range names {
 Пропуск сразу двух переменных не сработает. На этапе компиляции произойдет ошибка:
 
 ```go
-for _,_ := range names {
-    fmt.Println("Nothing")
+for _, _ := range names {
+	fmt.Println("Nothing")
 }
 ```
 

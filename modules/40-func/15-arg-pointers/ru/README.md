@@ -39,7 +39,6 @@ func main() {
 	fmt.Printf("points on init %+v\n", up)
 	// points on init {email:test@test.com password:qwerty}
 }
-
 ```
 
 Мапы по умолчанию передаются с указателем:

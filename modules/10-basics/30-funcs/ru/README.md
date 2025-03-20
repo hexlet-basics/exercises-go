@@ -21,12 +21,12 @@ package math
 
 // публичная функция, можно вызвать извне как math.Multiply(5,7)
 func Multiply(x int, y int) int {
-	...
+	// ...
 }
 
 // приватная функция, извне не вызвать
 func divide(x int, y int) int {
-	...
+	// ...
 }
 ```
 

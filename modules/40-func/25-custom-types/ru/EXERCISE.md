@@ -11,9 +11,9 @@ type Person struct {
 
 ```go
 pl := PersonList{
-  {Age: 18},
-  {Age: 44},
-  {Age: 18},
+	{Age: 18},
+	{Age: 44},
+	{Age: 18},
 }
 
 pl.GetAgePopularity() // map[18:2 44:1]

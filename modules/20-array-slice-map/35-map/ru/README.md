@@ -41,18 +41,18 @@ cache := make(map[string]struct{})
 
 // проверяем есть ли ключ `key` в мапе
 _, ok = cache["key"]
-fmt.Println(ok)  // false
+fmt.Println(ok) // false
 
 // добавим ключ и проверим вновь
 cache["key"] = struct{}{}
 _, ok = cache["key"]
-fmt.Println(ok)  // true
+fmt.Println(ok) // true
 ```
 
 Элементы удаляются с помощью встроенной функции `delete(m map[Type]Type1, key Type)`:
 
 ```go
-engToRus := map[string]string{"hello":"привет", "world":"мир"}
+engToRus := map[string]string{"hello": "привет", "world": "мир"}
 
 delete(engToRus, "world")
 

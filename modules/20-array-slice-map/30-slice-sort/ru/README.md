@@ -2,7 +2,7 @@
 Сортировка массива — распространненая задача в программировании. Во всех языках существуют готовые решения для этой задачи, и Go — не исключение. Стандартный пакет `sort` предоставляет функции для сортировки:
 
 ```go
-nums := []int{2,1,6,5,3,4}
+nums := []int{2, 1, 6, 5, 3, 4}
 
 sort.Slice(nums, func(i, j int) bool {
 	return nums[i] < nums[j]
@@ -21,13 +21,13 @@ func Print(arg interface{}) {
 func main() {
 	Print("hello!")
 	Print(123)
-	Print([]int{1,5,10})
+	Print([]int{1, 5, 10})
 }
 ```
 
 Вывод:
 
-```go
+```text
 hello!
 123
 [1 5 10]
@@ -38,7 +38,7 @@ hello!
 "Под капотом" в функции `sort.Slice` используется быстрая сортировка. В пакете также присутствует сортировка вставками `sort.SliceStable`:
 
 ```go
-nums := []int{2,1,6,5,3,4}
+nums := []int{2, 1, 6, 5, 3, 4}
 
 sort.SliceStable(nums, func(i, j int) bool {
 	return nums[i] < nums[j]
