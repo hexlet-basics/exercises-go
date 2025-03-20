@@ -43,9 +43,9 @@ longTrickyName := "Josefina"
 
 ```go
 var (
-  a string // ""
-  b bool // false
-  c int // 0
+	a string // ""
+	b bool   // false
+	c int    // 0
 )
 ```
 

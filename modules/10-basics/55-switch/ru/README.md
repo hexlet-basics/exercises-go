@@ -12,9 +12,9 @@ switch x {
 }
 ```
 
-Output:
+Вывод:
 
-```go
+```text
 case 10
 ```
 
@@ -24,19 +24,21 @@ case 10
 x := 10
 
 switch { // выражение отсутствует. Для компилятора выглядит как: switch true
-	default:
-		fmt.Println("default case")
-	case x == 10:
-		fmt.Println("equal 10 case")
-		fallthrough
-	case x < 10:
-		fmt.Println("less 10 case")
+default:
+	fmt.Println("default case")
+case x == 10:
+	fmt.Println("equal 10 case")
+	fallthrough
+case x < 10:
+	fmt.Println("less 10 case")
 }
 ```
 
 Output:
 
-```go
+```text
 equal 10 case
-less or equal 10 case
+less 10 case
 ```
+
+В примере, выполнится условие `x == 10`, а затем, благодаря `fallthrough` сразу же выполнится и код следующего блока, игнорируя при этом условие `x < 10`.

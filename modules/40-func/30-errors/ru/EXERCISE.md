@@ -16,7 +16,7 @@ type HelloWorld struct {
 func main() {
 	hw := HelloWorld{}
 
-  // первым аргументом передается JSON-строка в виде слайса байт. Вторым аргументом указатель на структуру, в которую нужно декодировать результат.
+	// первым аргументом передается JSON-строка в виде слайса байт. Вторым аргументом указатель на структуру, в которую нужно декодировать результат.
 	err := json.Unmarshal([]byte("{\"hello\":\"world\"}"), &hw)
 
 	fmt.Printf("error: %s, struct: %+v\n", err, hw) // error: %!s(<nil>), struct: {Hello:world}
@@ -39,9 +39,9 @@ type CreateUserRequest struct {
 ```go
 // validation errors
 var (
-	errEmailRequired                = errors.New("email is required") // когда поле email не заполнено
-	errPasswordRequired             = errors.New("password is required") // когда поле password не заполнено
-	errPasswordConfirmationRequired = errors.New("password confirmation is required") // когда поле password_confirmation не заполнено
+	errEmailRequired                = errors.New("email is required")                             // когда поле email не заполнено
+	errPasswordRequired             = errors.New("password is required")                          // когда поле password не заполнено
+	errPasswordConfirmationRequired = errors.New("password confirmation is required")             // когда поле password_confirmation не заполнено
 	errPasswordDoesNotMatch         = errors.New("password does not match with the confirmation") // когда поля password и password_confirmation не совпадают
 )
 ```
@@ -49,9 +49,18 @@ var (
 Примеры работы функции `DecodeAndValidateRequest`:
 
 ```go
-DecodeAndValidateRequest([]byte("{\"email\":\"\",\"password\":\"test\",\"password_confirmation\":\"test\"}")) // CreateUserRequest{}, "email is required"
-DecodeAndValidateRequest([]byte("{\"email\":\"test\",\"password\":\"\",\"password_confirmation\":\"test\"}")) // CreateUserRequest{}, "password is required"
-DecodeAndValidateRequest([]byte("{\"email\":\"test\",\"password\":\"test\",\"password_confirmation\":\"\"}")) // CreateUserRequest{}, "password confirmation is required"
-DecodeAndValidateRequest([]byte("{\"email\":\"test\",\"password\":\"test\",\"password_confirmation\":\"test2\"}")) // CreateUserRequest{}, "password does not match with the confirmation"
-DecodeAndValidateRequest([]byte("{\"email\":\"email@test.com\",\"password\":\"passwordtest\",\"password_confirmation\":\"passwordtest\"}")) // CreateUserRequest{Email:"email@test.com", Password:"passwordtest", PasswordConfirmation:"passwordtest"}, nil
+DecodeAndValidateRequest([]byte("{\"email\":\"\",\"password\":\"test\",\"password_confirmation\":\"test\"}"))
+// CreateUserRequest{}, "email is required"
+
+DecodeAndValidateRequest([]byte("{\"email\":\"test\",\"password\":\"\",\"password_confirmation\":\"test\"}"))
+// CreateUserRequest{}, "password is required"
+
+DecodeAndValidateRequest([]byte("{\"email\":\"test\",\"password\":\"test\",\"password_confirmation\":\"\"}"))
+// CreateUserRequest{}, "password confirmation is required"
+
+DecodeAndValidateRequest([]byte("{\"email\":\"test\",\"password\":\"test\",\"password_confirmation\":\"test2\"}"))
+// CreateUserRequest{}, "password does not match with the confirmation"
+
+DecodeAndValidateRequest([]byte("{\"email\":\"email@test.com\",\"password\":\"passwordtest\",\"password_confirmation\":\"passwordtest\"}"))
+// CreateUserRequest{Email:"email@test.com", Password:"passwordtest", PasswordConfirmation:"passwordtest"}, nil
 ```

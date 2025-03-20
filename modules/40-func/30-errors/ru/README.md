@@ -81,7 +81,7 @@ func (e *TimeoutErr) Error() string {
 ```go
 // функция возвращает несколько аргументов, и ошибка возвращается последней
 func DoHTTPCall(r Request) (Response, error) {
-	...
+	// ...
 }
 ```
 

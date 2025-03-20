@@ -12,7 +12,7 @@ for id, name := range idToName {
 
 Вывод:
 
-```go
+```text
 id:  1 name:  Alex
 id:  2 name:  Dan
 id:  3 name:  George
@@ -36,7 +36,7 @@ for num := range numExistence {
 
 Вывод:
 
-```go
+```text
 8
 1
 2

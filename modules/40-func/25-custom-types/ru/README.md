@@ -30,7 +30,6 @@ func main() {
 ```go
 type counter int
 
-
 // передается указатель, чтобы можно было изменить состояние счетчика "c"
 func (c *counter) inc() {
 	*c++

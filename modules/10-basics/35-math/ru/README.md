@@ -31,7 +31,7 @@ x * y // 50
 x := 5.05
 y := 10
 
-x + y  // invalid operation: x + y (mismatched types float64 and int)
+x + y // invalid operation: x + y (mismatched types float64 and int)
 ```
 
 Чтобы осуществить сложение из прошлого примера, нам нужно конвертировать значения к одному типу
@@ -40,7 +40,7 @@ x + y  // invalid operation: x + y (mismatched types float64 and int)
 x := 5.05
 y := 10
 
-x + float64(y)  // 15.05
+x + float64(y) // 15.05
 ```
 
 Числовые типы конвертируются без проблем между собой, однако есть нюансы, о которых стоит помнить:

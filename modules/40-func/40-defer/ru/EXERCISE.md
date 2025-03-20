@@ -8,7 +8,12 @@
 Пример работы:
 
 ```go
-ExecuteMergeDictsJob(&MergeDictsJob{}) // &MergeDictsJob{IsFinished: true}, "at least 2 dictionaries are required"
-ExecuteMergeDictsJob(&MergeDictsJob{Dicts: []map[string]string{{"a": "b"},nil}}) // &MergeDictsJob{IsFinished: true, Dicts: []map[string]string{{"a": "b"},nil}}, "nil dictionary"
-ExecuteMergeDictsJob(&MergeDictsJob{Dicts: []map[string]string{{"a": "b"},{"b": "c"}}}) // &MergeDictsJob{IsFinished: true, Dicts: []map[string]string{{"a": "b", "b": "c"}}}, nil
+ExecuteMergeDictsJob(&MergeDictsJob{})
+// &MergeDictsJob{IsFinished: true}, "at least 2 dictionaries are required"
+
+ExecuteMergeDictsJob(&MergeDictsJob{Dicts: []map[string]string{{"a": "b"}, nil}})
+// &MergeDictsJob{IsFinished: true, Dicts: []map[string]string{{"a": "b"},nil}}, "nil dictionary"
+
+ExecuteMergeDictsJob(&MergeDictsJob{Dicts: []map[string]string{{"a": "b"}, {"b": "c"}}})
+// &MergeDictsJob{IsFinished: true, Dicts: []map[string]string{{"a": "b", "b": "c"}}}, nil
 ```

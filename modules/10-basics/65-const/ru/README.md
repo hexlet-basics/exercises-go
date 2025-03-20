@@ -3,15 +3,13 @@
 
 ```go
 const [название] [тип данных] = [значение]
-
-const StatusOk int = 200
 ```
 
 На практике тип данных не указывается, и несколько констант принято объявлять в рамках одного блока `const`:
 
 ```go
 const (
-	StatusOk = 200
+	StatusOk       = 200
 	StatusNotFound = 404
 )
 ```
@@ -27,15 +25,14 @@ type Person struct {
 func main() {
 	// такие константы допустимы
 	const (
-		num = 20
-		str = "hey"
+		num     = 20
+		str     = "hey"
 		isValid = true
 	)
 
 	// нельзя объявить структуру как константу
 	const p = Person{} // ошибка компиляции: const initializer Person{} is not a constant
 }
-
 ```
 
 Регистр первой буквы указывает на публичность/приватность константы:
@@ -63,7 +60,7 @@ func main() {
 	const status = 404
 
 	fmt.Println("default status:", defaultStatus) // default status: 200
-	fmt.Println("current status:", status) // current status: 404
+	fmt.Println("current status:", status)        // current status: 404
 }
 ```
 
@@ -82,14 +79,14 @@ const (
 )
 
 const (
-a = iota
-b = 42
-c = iota
-d
+	a = iota
+	b = 42
+	c = iota
+	d
 )
 
 func main() {
-fmt.Println(zero, one, two, three) // 0 1 2 3
-fmt.Println(a, b, c, d)            // 0 42 2 3
+	fmt.Println(zero, one, two, three) // 0 1 2 3
+	fmt.Println(a, b, c, d)            // 0 42 2 3
 }
 ```

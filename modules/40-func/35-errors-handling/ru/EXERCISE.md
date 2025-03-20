@@ -19,8 +19,15 @@ var (
 Реализуйте функцию `GetErrorMsg(err error) string`, которая возвращает текст ошибки, если она критичная. В случае неизвестной ошибки возвращается строка *unknown error*:
 
 ```go
-GetErrorMsg(errors.New("bad connection")) // "bad connection"
-GetErrorMsg(errors.New("bad request")) // "bad request"
-GetErrorMsg(nonCriticalError{}) // ""
-GetErrorMsg(errors.New("random error")) // "unknown error"
+GetErrorMsg(errors.New("bad connection"))
+// "bad connection"
+
+GetErrorMsg(errors.New("bad request"))
+// "bad request"
+
+GetErrorMsg(nonCriticalError{})
+// ""
+
+GetErrorMsg(errors.New("random error"))
+// "unknown error"
 ```

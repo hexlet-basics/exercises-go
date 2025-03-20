@@ -5,14 +5,14 @@
 type Person struct {
 	// [название поля] [тип данных]
 	Name string
-	Age int
+	Age  int
 }
 
 func main() {
 	p := Person{Name: "John", Age: 25}
 
 	p.Name // "John"
-	p.Age // 25
+	p.Age  // 25
 }
 ```
 
@@ -23,7 +23,7 @@ func main() {
 	p := Person{}
 
 	p.Name // ""
-	p.Age // 0
+	p.Age  // 0
 }
 ```
 
@@ -37,7 +37,7 @@ type Person struct { // структура публична
 }
 
 type wallet struct { // структура приватна: можно инициализировать только внутри текущего пакета
-	id string
+	id          string
 	moneyAmount float64
 }
 ```
@@ -46,8 +46,8 @@ type wallet struct { // структура приватна: можно иниц
 
 ```go
 type User struct {
-	ID int64 `json:"id" validate:"required"`
-	Email string `json:"email" validate:"required,email"`
+	ID        int64  `json:"id" validate:"required"`
+	Email     string `json:"email" validate:"required,email"`
 	FirstName string `json:"first_name" validate:"required"`
 }
 ```
@@ -110,7 +110,7 @@ func main() {
 
 Вывод программы:
 
-```
+```text
 Key: 'User.ID' Error:Field validation for 'ID' failed on the 'required' tag
 Key: 'User.Email' Error:Field validation for 'Email' failed on the 'required' tag
 Key: 'User.FirstName' Error:Field validation for 'FirstName' failed on the 'required' tag

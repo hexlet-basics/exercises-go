@@ -2,8 +2,8 @@
 Например:
 
 ```go
-IsValid(0, "hello world") // false
+IsValid(0, "hello world")   // false
 IsValid(-22, "hello world") // false
-IsValid(22, "") // false
+IsValid(22, "")             // false
 IsValid(225, "hello world") // true
 ```

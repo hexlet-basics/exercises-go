@@ -14,13 +14,13 @@ type Child struct {
 cp := CopyParent(nil) // Parent{}
 
 p := &Parent{
-   Name: "Harry",
-   Children: []Child{
-       {
-           Name: "Andy",
-           Age:  18,
-       },
-   },
+	Name: "Harry",
+	Children: []Child{
+		{
+			Name: "Andy",
+			Age:  18,
+		},
+	},
 }
 cp := CopyParent(p)
 
