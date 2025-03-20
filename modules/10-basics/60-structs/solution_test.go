@@ -35,7 +35,7 @@ func TestValidate(t *testing.T) {
 	a.Equal("invalid request", Validate(UserCreateRequest{
 		FirstName: "John Smith",
 		Age:       15,
-	}))	
+	}))
 	a.Equal("", Validate(UserCreateRequest{
 		FirstName: "John",
 		Age:       150,

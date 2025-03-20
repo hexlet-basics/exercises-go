@@ -10,11 +10,12 @@ func latinLetters(s string) string {
 	sb := &strings.Builder{}
 
 	for _, r := range s {
-		if unicode.Is(unicode.Latin, r)  {
+		if unicode.Is(unicode.Latin, r) {
 			sb.WriteRune(r)
 		}
-    }
+	}
 
-    return sb.String()
+	return sb.String()
 }
+
 // END

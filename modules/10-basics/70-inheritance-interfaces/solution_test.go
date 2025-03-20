@@ -8,9 +8,9 @@ import (
 func TestSumWorker(t *testing.T) {
 	a := assert.New(t)
 
-	cat := Cat{} 
-  	dog := Dog{}
-  	cow := Cow{}
+	cat := Cat{}
+	dog := Dog{}
+	cow := Cow{}
 
 	a.Equal("Мяу", cat.Voice())
 

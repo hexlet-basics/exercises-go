@@ -2,7 +2,7 @@
 
 ```go
 if "hi" { // non-bool "hi" (type string) used as if condition
-    // какой-то код
+	// какой-то код
 }
 ```
 
@@ -12,33 +12,33 @@ if "hi" { // non-bool "hi" (type string) used as if condition
 package main
 
 import (
-    "fmt"
-    "strings"
+	"fmt"
+	"strings"
 )
 
 func statusByName(name string) string {
-    // функция проверяет, что строка name начинается с подстроки "Mr."
-    if strings.HasPrefix(name, "Mr.") {
-        return "married man"
-    } else if strings.HasPrefix(name, "Mrs.") {
-        return "married woman"
-    } else {
-        return "single person"
-    }
+	// функция проверяет, что строка name начинается с подстроки "Mr."
+	if strings.HasPrefix(name, "Mr.") {
+		return "married man"
+	} else if strings.HasPrefix(name, "Mrs.") {
+		return "married woman"
+	} else {
+		return "single person"
+	}
 }
 
 func main() {
-    n := "Mr. Doe"
-    fmt.Printf("%s is a %s\n", n, statusByName(n))
-    // => Mr. Doe is a married man
+	n := "Mr. Doe"
+	fmt.Printf("%s is a %s\n", n, statusByName(n))
+	// => Mr. Doe is a married man
 
-    n = "Mrs. Berry"
-    fmt.Printf("%s is a %s\n", n, statusByName(n))
-    // => Mrs. Berry is a married woman
+	n = "Mrs. Berry"
+	fmt.Printf("%s is a %s\n", n, statusByName(n))
+	// => Mrs. Berry is a married woman
 
-    n = "Karl"
-    fmt.Printf("%s is a %s\n", n, statusByName(n))
-    // => Karl is a single person
+	n = "Karl"
+	fmt.Printf("%s is a %s\n", n, statusByName(n))
+	// => Karl is a single person
 }
 ```
 

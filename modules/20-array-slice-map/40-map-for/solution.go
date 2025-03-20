@@ -21,7 +21,7 @@ func MostPopularWord(words []string) string {
 			break
 		}
 	}
-	
+
 	return mostPopWord
 }
 

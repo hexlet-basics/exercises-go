@@ -1,19 +1,19 @@
 package solution
 
 type Voicer interface {
-    Voice() string
+	Voice() string
 }
 
 type Cat struct {
-    // … 
+	// …
 }
 
 type Cow struct {
-    // … 
+	// …
 }
 
 type Dog struct {
-	// … 
+	// …
 }
 
 // BEGIN
@@ -27,7 +27,7 @@ func (cw Cow) Voice() string {
 }
 
 func (d Dog) Voice() string {
-    return "Гав"
+	return "Гав"
 }
 
 // END
