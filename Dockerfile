@@ -2,8 +2,7 @@ FROM hexletbasics/base-image:latest
 
 RUN apt-get update && apt-get install -yqq \
     wget \
-    build-essential && \
-    rm -rf /var/lib/apt/lists/*
+    build-essential
 
 RUN wget -c -q https://dl.google.com/go/go1.18.1.linux-amd64.tar.gz -O - | tar -xz -C /usr/local
 ENV PATH=/usr/local/go/bin:$PATH
