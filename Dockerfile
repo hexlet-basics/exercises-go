@@ -1,10 +1,9 @@
 FROM hexletbasics/base-image:latest
 
-# NOTE: try to fix go not found
-RUN DEBUG=0
+ARG TARGETARCH=amd64
 
-RUN apt-get update && apt-get install wget -yqq
-RUN wget -c -q https://dl.google.com/go/go1.19.1.linux-amd64.tar.gz -O - | tar -xz -C /usr/local
+RUN apt-get update && apt-get install -yqq wget
+RUN wget -q https://dl.google.com/go/go1.19.1.linux-$TARGETARCH.tar.gz -O - | tar -xz -C /usr/local;
 ENV PATH=/usr/local/go/bin:$PATH
 
 # RUN go get -u golang.org/x/lint/golint
