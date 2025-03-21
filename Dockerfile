@@ -1,9 +1,9 @@
 FROM hexletbasics/base-image:latest
 
-ARG TARGETARCH=amd64
+ARG TARGETARCH
 
 RUN apt-get update && apt-get install -yqq wget
-RUN wget -q https://dl.google.com/go/go1.19.1.linux-$TARGETARCH.tar.gz -O - | tar -xz -C /usr/local;
+RUN wget -q https://dl.google.com/go/go1.19.1.linux-${TARGETARCH}.tar.gz -O - | tar -xz -C /usr/local;
 ENV PATH=/usr/local/go/bin:$PATH
 
 # RUN go get -u golang.org/x/lint/golint
