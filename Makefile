@@ -15,22 +15,25 @@ compose-build:
 	docker compose build
 
 compose-bash:
-	docker compose run exercises bash
+	docker compose run --rm exercises bash
 
 compose-test:
-	docker compose run exercises make test
+	docker compose run --rm exercises make test
+
+compose-down:
+	docker compose down -v --remove-orphans
 
 compose-build-test: compose-build compose
 
 compose-description-lint:
-	docker compose run exercises make description-lint
+	docker compose run --rm exercises make description-lint
 
 compose-schema-validate:
-	docker compose run exercises make schema-validate
+	docker compose run --rm exercises make schema-validate
 
 ci-check:
 	docker compose --file docker-compose.yml build
 	docker compose --file docker-compose.yml up --abort-on-container-exit
 
 compose-code-lint:
-	docker compose run exercises make code-lint
+	docker compose run --rm exercises make code-lint
