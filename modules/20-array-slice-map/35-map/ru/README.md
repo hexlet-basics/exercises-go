@@ -40,7 +40,7 @@ element, elementExists := elements[225] // false, false
 cache := make(map[string]struct{})
 
 // проверяем есть ли ключ `key` в мапе
-_, ok = cache["key"]
+_, ok := cache["key"]
 fmt.Println(ok) // false
 
 // добавим ключ и проверим вновь
