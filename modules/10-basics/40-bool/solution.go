@@ -2,9 +2,8 @@ package solution
 
 // BEGIN
 
-// IsValid checks whether id and text are filled.
-func IsValid(id int, text string) bool {
-	return id > 0 && text != ""
+func IsEven(n int) bool {
+	return n%2 == 0
 }
 
 // END

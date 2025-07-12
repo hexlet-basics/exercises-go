@@ -6,12 +6,12 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestIsValid(t *testing.T) {
+func TestIsEven(t *testing.T) {
 	a := assert.New(t)
-	a.False(IsValid(0, ""))
-	a.False(IsValid(5, ""))
-	a.False(IsValid(-3, ""))
-	a.False(IsValid(0, "hey!"))
-	a.False(IsValid(-10, "hey!"))
-	a.True(IsValid(10, "hey!"))
+
+	a.False(IsEven(5))
+	a.True(IsEven(6))
+	a.True(IsEven(0))
+	a.True(IsEven(-2))
+	a.False(IsEven(-3))
 }

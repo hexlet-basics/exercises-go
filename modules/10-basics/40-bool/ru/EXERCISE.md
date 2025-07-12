@@ -1,9 +1,11 @@
-Реализуйте функцию `IsValid(id int, text string) bool`, которая проверяет, что переданный идентификатор `id` является положительным числом и текст `text` не пустой.
-Например:
+Реализуйте функцию `IsEven()`, которая принимает целое число и возвращает `true`, если число чётное, и `false` — если нечётное. Нельзя использовать встроенные функции для определения чётности — только арифметику и операторы.
+
+**Примеры**
 
 ```go
-IsValid(0, "hello world")   // false
-IsValid(-22, "hello world") // false
-IsValid(22, "")             // false
-IsValid(225, "hello world") // true
+IsEven(5) // false
+IsEven(6) // true
+IsEven(0) // true
+IsEven(-4) // true
+IsEven(-3) // false
 ```
