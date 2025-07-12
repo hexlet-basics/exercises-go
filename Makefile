@@ -1,5 +1,8 @@
 -include /opt/basics/common/common.mk
 
+update-deps:
+	go get -u all && go mod tidy
+
 code-lint:
 	golangci-lint run modules/...
 
