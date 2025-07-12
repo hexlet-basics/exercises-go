@@ -6,10 +6,12 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMinInt(t *testing.T) {
+func TestCalculateProgress(t *testing.T) {
 	a := assert.New(t)
-	a.Equal(5, MinInt(5, 20))
-	a.Equal(-30, MinInt(-30, 30))
-	a.Equal(0, MinInt(0, 0))
-	a.Equal(0, MinInt(2, 0))
+
+	a.InEpsilon(0.0, CalculateProgress(0, 10), 0.0001)
+	a.InEpsilon(0.25, CalculateProgress(1, 4), 0.0001)
+	a.InEpsilon(0.4, CalculateProgress(2, 5), 0.0001)
+	a.InEpsilon(0.75, CalculateProgress(3, 4), 0.0001)
+	a.InEpsilon(1.0, CalculateProgress(5, 5), 0.0001)
 }
