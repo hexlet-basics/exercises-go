@@ -1,8 +1,0 @@
----
-name: Наследование и интерфейсы
-tips:
-  - >
-    [Interfaces and other
-    types](https://go.dev/doc/effective_go#interfaces_and_types)
-
-    [Interface names](https://go.dev/doc/effective_go#interface-names)

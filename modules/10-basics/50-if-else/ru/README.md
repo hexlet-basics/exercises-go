@@ -1,45 +1,55 @@
-Условия в Go представлены привычной конструкцией `if else`. В условии должно быть строго выражение логического типа. Следующий пример вернет ошибку компиляции:
+В любой программе часто требуется выполнять разные действия в зависимости от условий. Для этого в Go, как и в большинстве языков программирования, используется конструкция `if`.
+
+**Базовый синтаксис**
 
 ```go
-if "hi" { // non-bool "hi" (type string) used as if condition
-	// какой-то код
+if условие {
+	// код, который выполнится, если условие истинно (true)
 }
 ```
 
-Корректный пример:
+**Пример**
 
 ```go
-package main
+age := 18
 
-import (
-	"fmt"
-	"strings"
-)
-
-func statusByName(name string) string {
-	// функция проверяет, что строка name начинается с подстроки "Mr."
-	if strings.HasPrefix(name, "Mr.") {
-		return "married man"
-	} else if strings.HasPrefix(name, "Mrs.") {
-		return "married woman"
-	} else {
-		return "single person"
-	}
-}
-
-func main() {
-	n := "Mr. Doe"
-	fmt.Printf("%s is a %s\n", n, statusByName(n))
-	// => Mr. Doe is a married man
-
-	n = "Mrs. Berry"
-	fmt.Printf("%s is a %s\n", n, statusByName(n))
-	// => Mrs. Berry is a married woman
-
-	n = "Karl"
-	fmt.Printf("%s is a %s\n", n, statusByName(n))
-	// => Karl is a single person
+if age >= 18 {
+	fmt.Println("Access granted")
 }
 ```
 
-Логическое выражение пишется после `if` без скобок. `else if` можно написать только раздельно.
+## Условие else
+
+Если нужно выполнить другой код в случае, когда условие ложно (`false`), добавляется блок `else`:
+
+```go
+if age >= 18 {
+	fmt.Println("Access granted")
+} else {
+	fmt.Println("Access denied")
+}
+```
+
+Когда условий больше двух, можно использовать цепочку `else if`:
+
+```go
+score := 85
+
+if score >= 90 {
+	fmt.Println("Grade: A")
+} else if score >= 80 {
+	fmt.Println("Grade: B")
+} else {
+	fmt.Println("Grade: C or lower")
+}
+```
+
+## Особенности if в Go
+
+- В Go не ставятся круглые скобки вокруг условия (в отличии, например, от C, Java, или JavaScript).
+- Тело `if` обязательно должно быть в фигурных скобках `{}` — даже если там одна строка.
+- Условие должно быть логического типа `bool`. Нельзя писать, например, `if` 1 — это вызовет ошибку компиляции.
+
+## Объявление переменной внутри if
+
+
