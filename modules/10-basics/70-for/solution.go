@@ -4,7 +4,7 @@ package solution
 
 func RepeatWord(word string, times int) string {
 	result := ""
-	for i := 0; i < times; i++ {
+	for range times {
 		result += word
 	}
 	return result
