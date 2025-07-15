@@ -1,6 +1,0 @@
----
-name: Строки и байты
-tips:
-  - >
-    [The Go Programming Language Specification —
-    String](https://golang.org/ref/spec#String_types)

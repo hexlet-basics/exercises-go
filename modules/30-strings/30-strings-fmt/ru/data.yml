@@ -1,5 +1,0 @@
----
-name: Форматирование строк
-tips:
-  - |
-    [Go Formatting](https://pkg.go.dev/fmt#hdr-Printing)
