@@ -1,5 +1,5 @@
 ---
-name: Слайсы из срезов
+name: Передача срезов в функцию
 tips:
   - >
     [The Go Programming Language Specification — Slice
