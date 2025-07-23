@@ -1,11 +1,14 @@
-Реализуйте функцию `MakeGreeting()`, которая принимает на вход строку — приветствие (например, "Hello") и возвращает новую функцию. Эта возвращённая функция должна принимать имя и возвращать строку-приветствие, например: "Hello, Hexlet!".
+Создайте функцию `BuildProfile(name string, age int, rating float64) string`,  
+которая возвращает строку профиля пользователя в формате:
 
-**Примеры:**
+    "Name: <name>, Age: <age>, Rating: <rating>"
+
+**Примеры**
 
 ```go
-greeter := MakeGreeting("Hello")
-greeter("Hexlet") // "Hello, Hexlet!"
+fmt.Println(BuildProfile("Alice", 30, 4.73))
+// "Name: Alice, Age: 30, Rating: 4.7"
 
-hiGreeter := MakeGreeting("Hi")
-hiGreeter("Go")   // "Hi, Go!"
+fmt.Println(BuildProfile("Bob", 25, 5))
+// "Name: Bob, Age: 25, Rating: 5.0"
 ```

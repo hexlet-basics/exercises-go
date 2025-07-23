@@ -5,9 +5,7 @@
 
 Функция должна возвращать строку в следующем формате:
 
-```
-Hello, <имя>! You have <число> new messages.
-```
+    Hello, <имя>! You have <число> new messages.
 
 **Примеры**
 
@@ -15,5 +13,3 @@ Hello, <имя>! You have <число> new messages.
 BuildGreeting("Ivan", 5) // "Hello, Ivan! You have 5 new messages."
 BuildGreeting("Hexlet", 0) // "Hello, Hexlet! You have 0 new messages."
 ```
-
-

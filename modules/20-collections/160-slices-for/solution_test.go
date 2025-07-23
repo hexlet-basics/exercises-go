@@ -1,28 +1,16 @@
 package solution
 
 import (
-	"golang.org/x/text/cases"
-	"golang.org/x/text/language"
-	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMap(t *testing.T) {
+func TestFilterExpensiveOrders(t *testing.T) {
 	a := assert.New(t)
-	testMap(a, []string{"John", "Peter", "Fedor"}, []string{"john", "peter", "fedor"}, func(s string) string {
-		return cases.Title(language.English).String(s)
-	})
-	testMap(a, []string{"hello", "world"}, []string{"HELLO", "WORLD"}, func(s string) string {
-		return strings.ToLower(s)
-	})
-}
-
-func testMap(a *assert.Assertions, expected, input []string, mapFunc func(s string) string) {
-	inputCopy := make([]string, len(input))
-	copy(inputCopy, input)
-
-	a.Equal(expected, Map(input, mapFunc))
-	a.Equal(inputCopy, input) // check that the initial slice hasn't been modified.
+	a.Equal([]int{120, 400, 220}, FilterExpensiveOrders([]int{120, 35, 70, 400, 15, 220, 90}, 100))
+	a.Equal([]int{}, FilterExpensiveOrders([]int{}, 100))
+	a.Equal([]int{}, FilterExpensiveOrders([]int{10, 20, 30}, 100))
+	a.Equal([]int{150, 200}, FilterExpensiveOrders([]int{150, 200}, 100))
+	a.Equal([]int{}, FilterExpensiveOrders([]int{100, 100}, 100)) // ровно limit не включается
 }

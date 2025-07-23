@@ -1,38 +1,36 @@
-# Циклы и срезы в Go
-
 Срезы — основной способ работы с коллекциями в Go. Чтобы обрабатывать такие структуры, чаще всего используются циклы. Go предлагает два подхода: классический цикл с индексом и удобный `range`, каждый из которых подходит под разные задачи.
 
 ## Обход среза по индексу
 
-~~~go
+```go
 names := []string{"Alice", "Bob", "Charlie"}
 
 for i := 0; i < len(names); i++ {
 	fmt.Println(names[i])
 }
-~~~
+```
 
 - Полный контроль над индексами
 - Подходит для изменения значений:
 
-~~~go
+```go
 nums := []int{1, 2, 3}
 
 for i := 0; i < len(nums); i++ {
 	nums[i] *= 2
 }
 fmt.Println(nums) // [2 4 6]
-~~~
+```
 
 ## Обход среза с помощью `range`
 
-~~~go
+```go
 langs := []string{"Go", "Rust", "Python"}
 
 for i, lang := range langs {
 	fmt.Printf("langs[%d] = %s\n", i, lang)
 }
-~~~
+```
 
 - `range` возвращает индекс и копию значения
 - Упрощает синтаксис
@@ -41,39 +39,39 @@ for i, lang := range langs {
 
 Если не нужен индекс:
 
-~~~go
+```go
 for _, lang := range langs {
 	fmt.Println(lang)
 }
-~~~
+```
 
 Если не нужно значение:
 
-~~~go
+```go
 for i := range langs {
 	fmt.Println(i)
 }
-~~~
+```
 
 ## Изменение значений в `range`
 
 Важно: переменная `lang` — это **копия** значения. Изменения не повлияют на оригинальный срез:
 
-~~~go
+```go
 for _, lang := range langs {
 	lang = strings.ToUpper(lang) // изменится копия, не оригинал
 }
 fmt.Println(langs) // ["Go" "Rust" "Python"]
-~~~
+```
 
 Чтобы изменить элементы, нужно использовать индекс:
 
-~~~go
+```go
 for i := range langs {
 	langs[i] = strings.ToUpper(langs[i])
 }
 fmt.Println(langs) // ["GO" "RUST" "PYTHON"]
-~~~
+```
 
 ## Вывод
 
@@ -83,4 +81,3 @@ fmt.Println(langs) // ["GO" "RUST" "PYTHON"]
 | Через `range` | Только через индекс | Нет                    | Да        |
 
 Цикл `range` — стандарт для чтения, `for` с индексом — для изменения.
-

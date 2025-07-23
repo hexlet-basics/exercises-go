@@ -2,14 +2,14 @@ package solution
 
 // BEGIN
 
-// Map iterates through the strs slice and modifies each element via mapFunc. The func is safe and strs won't be modified.
-func Map(strs []string, mapFunc func(s string) string) []string {
-	mapped := make([]string, len(strs))
-	for i, s := range strs {
-		mapped[i] = mapFunc(s)
+func FilterExpensiveOrders(orders []int, limit int) []int {
+	var result []int
+	for _, order := range orders {
+		if order > limit {
+			result = append(result, order)
+		}
 	}
-
-	return mapped
+	return result
 }
 
 // END

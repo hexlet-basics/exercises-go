@@ -1,11 +1,19 @@
-Реализуйте функцию `MakeGreeting()`, которая принимает на вход строку — приветствие (например, "Hello") и возвращает новую функцию. Эта возвращённая функция должна принимать имя и возвращать строку-приветствие, например: "Hello, Hexlet!".
+Реализуйте функцию `GetFileExtension(filename string) (string, error)`,  
+которая возвращает расширение файла (текст после последней точки).  
+Если в имени файла нет точки, функция должна вернуть ошибку.
 
-**Примеры:**
+Также создайте функцию `PrintFileExtension(filename string)`,  
+которая вызывает `GetFileExtension` и печатает расширение или сообщение об ошибке.
+
+**Примеры**
 
 ```go
-greeter := MakeGreeting("Hello")
-greeter("Hexlet") // "Hello, Hexlet!"
+PrintFileExtension("document.txt")
+// Расширение файла: txt
 
-hiGreeter := MakeGreeting("Hi")
-hiGreeter("Go")   // "Hi, Go!"
+PrintFileExtension("archive.tar.gz")
+// Расширение файла: gz
+
+PrintFileExtension("README")
+// Ошибка: файл "README" не имеет расширения
 ```

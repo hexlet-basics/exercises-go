@@ -6,10 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestRemoveFirstElement(t *testing.T) {
+func TestAddDiscount(t *testing.T) {
 	a := assert.New(t)
-	a.Equal([]int{2, 3, 4}, RemoveFirstElement([]int{1, 2, 3, 4}))
-	a.Equal([]int{}, RemoveFirstElement([]int{}))
-	a.Equal([]int{-3, -2}, RemoveFirstElement([]int{-4, -3, -2}))
-	a.Equal([]int{}, RemoveFirstElement([]int{3}))
+	a.Equal([]float64{100, 200, 270}, AddDiscount([]float64{100, 200, 300}, 10))
+	a.Equal([]float64{}, AddDiscount([]float64{}, 15))
+	a.Equal([]float64{400}, AddDiscount([]float64{500}, 20))
+	a.Equal([]float64{50, 90}, AddDiscount([]float64{50, 100}, 10))
 }

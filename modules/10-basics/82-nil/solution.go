@@ -1,11 +1,23 @@
-package solution
+package main
+
+import (
+	"fmt"
+)
 
 // BEGIN
 
-func MakeGreeting(greeting string) func(string) string {
-	return func(name string) string {
-		return greeting + ", " + name + "!"
+type Config struct {
+	Host *string
+	Port int
+}
+
+func PrintConfig(cfg *Config) {
+	if cfg.Host == nil {
+		fmt.Println("Host is not set")
+	} else {
+		fmt.Println("Host:", *cfg.Host)
 	}
+	fmt.Println("Port:", cfg.Port)
 }
 
 // END

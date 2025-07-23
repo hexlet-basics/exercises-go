@@ -1,11 +1,16 @@
 package solution
 
+import "fmt"
+
 // BEGIN
 
-func MakeGreeting(greeting string) func(string) string {
-	return func(name string) string {
-		return greeting + ", " + name + "!"
+func GetFileExtension(filename string) (string, error) {
+	for i := len(filename) - 1; i >= 0; i-- {
+		if filename[i] == '.' {
+			return filename[i+1:], nil
+		}
 	}
+	return "", fmt.Errorf("файл %q не имеет расширения", filename)
 }
 
 // END

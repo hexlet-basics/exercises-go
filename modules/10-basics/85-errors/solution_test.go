@@ -1,4 +1,4 @@
-package solution
+package main
 
 import (
 	"testing"
@@ -6,15 +6,27 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMakeGreeting(t *testing.T) {
-	a := assert.New(t)
+func TestGetFileExtension(t *testing.T) {
+	tests := []struct {
+		name       string
+		filename   string
+		wantExt    string
+		shouldFail bool
+	}{
+		{"Simple extension", "file.txt", "txt", false},
+		{"Multiple dots", "archive.tar.gz", "gz", false},
+		{"No extension", "README", "", true},
+	}
 
-	greeter := MakeGreeting("Hello")
-	a.Equal("Hello, Hexlet!", greeter("Hexlet"))
-	a.Equal("Hello, Go!", greeter("Go"))
-
-	hi := MakeGreeting("Hi")
-	a.Equal("Hi, Hexlet!", hi("Hexlet"))
-	a.Equal("Hi, Dev!", hi("Dev"))
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			ext, err := GetFileExtension(tt.filename)
+			if tt.shouldFail {
+				assert.Error(t, err)
+			} else {
+				assert.NoError(t, err)
+				assert.Equal(t, tt.wantExt, ext)
+			}
+		})
+	}
 }
-

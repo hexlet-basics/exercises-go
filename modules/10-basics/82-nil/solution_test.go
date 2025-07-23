@@ -1,20 +1,59 @@
-package solution
+package main
 
 import (
+	"bytes"
+	"io"
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMakeGreeting(t *testing.T) {
-	a := assert.New(t)
+func TestPrintConfig(t *testing.T) {
+	tests := []struct {
+		name     string
+		cfg      *Config
+		expected string
+	}{
+		{
+			name:     "With host",
+			cfg:      &Config{Host: strPtr("localhost"), Port: 8080},
+			expected: "Host: localhost\nPort: 8080\n",
+		},
+		{
+			name:     "Without host",
+			cfg:      &Config{Port: 3000},
+			expected: "Host is not set\nPort: 3000\n",
+		},
+	}
 
-	greeter := MakeGreeting("Hello")
-	a.Equal("Hello, Hexlet!", greeter("Hexlet"))
-	a.Equal("Hello, Go!", greeter("Go"))
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			// Создаём pipe для перехвата вывода
+			r, w, err := os.Pipe()
+			assert.NoError(t, err)
 
-	hi := MakeGreeting("Hi")
-	a.Equal("Hi, Hexlet!", hi("Hexlet"))
-	a.Equal("Hi, Dev!", hi("Dev"))
+			stdout := os.Stdout
+			os.Stdout = w
+
+			// Выполняем тестируемую функцию
+			PrintConfig(tt.cfg)
+
+			// Закрываем writer и восстанавливаем Stdout
+			w.Close()
+			os.Stdout = stdout
+
+			// Читаем перехваченный вывод
+			var buf bytes.Buffer
+			_, err = io.Copy(&buf, r)
+			assert.NoError(t, err)
+
+			// Проверка результата
+			assert.Equal(t, tt.expected, buf.String())
+		})
+	}
 }
 
+func strPtr(s string) *string {
+	return &s
+}

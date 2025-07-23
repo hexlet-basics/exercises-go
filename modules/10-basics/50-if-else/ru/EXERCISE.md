@@ -4,5 +4,6 @@
 
 ```go
 DomainForLocale("site.com", "")   // en.site.com
-DomainForLocale("site.com", "ru") // ru.site.com
+DomainForLocale("site.com", "fr") // fr.site.com
+DomainForLocale("site.com", "es") // es.site.com
 ```

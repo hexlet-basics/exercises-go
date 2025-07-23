@@ -1,11 +1,14 @@
-Реализуйте функцию `MakeGreeting()`, которая принимает на вход строку — приветствие (например, "Hello") и возвращает новую функцию. Эта возвращённая функция должна принимать имя и возвращать строку-приветствие, например: "Hello, Hexlet!".
+Создайте структуру `Product` с полями:
 
-**Примеры:**
+- `Name` — название товара (строка),
+- `Price` — цена (целое число).
+
+Реализуйте функцию `NewDiscountedProduct(name string, price int, discount int) *Product`,  
+которая возвращает **указатель** на новый товар с учётом скидки `discount` (в процентах).
+
+**Пример**
 
 ```go
-greeter := MakeGreeting("Hello")
-greeter("Hexlet") // "Hello, Hexlet!"
-
-hiGreeter := MakeGreeting("Hi")
-hiGreeter("Go")   // "Hi, Go!"
+p := NewDiscountedProduct("Laptop", 1000, 10)
+fmt.Println(p.Price) // 900
 ```

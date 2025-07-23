@@ -16,6 +16,5 @@ ModifySpaces("hello world", "")        // hello*world
 
 ```go
 strings.ReplaceAll("hello world!", "world!", "buddy!") // hello buddy!
-
 strings.ReplaceAll("one two three", " ", "_") // one_two_three
 ```

@@ -1,6 +1,0 @@
----
-name: Ошибки
-tips:
-  - >
-    [The Go Programming Language Specification —
-    Errors](https://golang.org/ref/spec#Errors)

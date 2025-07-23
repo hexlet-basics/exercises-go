@@ -1,11 +1,29 @@
-Реализуйте функцию `MakeGreeting()`, которая принимает на вход строку — приветствие (например, "Hello") и возвращает новую функцию. Эта возвращённая функция должна принимать имя и возвращать строку-приветствие, например: "Hello, Hexlet!".
+Создайте структуру `Config` с полями:
 
-**Примеры:**
+- `Host` — указатель на строку (`*string`),
+- `Port` — число (`int`).
+
+Реализуйте функцию `PrintConfig(cfg *Config)`, которая должна:
+
+1. Проверять, инициализировано ли поле `Host`.  
+   - Если `Host == nil`, выводить `"Host is not set"`.
+   - Если `Host != nil`, выводить значение строки `Host`.
+
+2. Всегда выводить значение поля `Port`.
+
+**Пример использования:**
 
 ```go
-greeter := MakeGreeting("Hello")
-greeter("Hexlet") // "Hello, Hexlet!"
+host := "localhost"
+cfg := &Config{Host: &host, Port: 8080}
+PrintConfig(cfg)
+// Вывод:
+// Host: localhost
+// Port: 8080
 
-hiGreeter := MakeGreeting("Hi")
-hiGreeter("Go")   // "Hi, Go!"
+cfg2 := &Config{Port: 3000}
+PrintConfig(cfg2)
+// Вывод:
+// Host is not set
+// Port: 3000
 ```

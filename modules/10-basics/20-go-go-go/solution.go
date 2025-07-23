@@ -12,7 +12,7 @@ func main() {
 	for i := 0; i < 3; i++ {
 		wg.Add(1)
 		go func() {
-			fmt.Println("Go!")
+			fmt.Println("Go! " + string(i))
 			wg.Done()
 		}()
 	}

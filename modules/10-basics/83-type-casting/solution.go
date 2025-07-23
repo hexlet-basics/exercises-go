@@ -1,11 +1,13 @@
 package solution
 
+import "strconv"
+
 // BEGIN
 
-func MakeGreeting(greeting string) func(string) string {
-	return func(name string) string {
-		return greeting + ", " + name + "!"
-	}
+func BuildProfile(name string, age int, rating float64) string {
+	ageStr := strconv.Itoa(age)
+	ratingStr := fmt.Sprintf("%.1f", rating)
+	return "Name: " + name + ", Age: " + ageStr + ", Rating: " + ratingStr
 }
 
 // END
