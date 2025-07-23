@@ -1,11 +1,13 @@
-package main
+package solution
 
 import "fmt"
 
-func main() {
+func PrintFullName() {
 	// BEGIN
+
 	firstName := "John"
 	lastName := "Smith"
 	fmt.Println(firstName, lastName)
+
 	// END
 }

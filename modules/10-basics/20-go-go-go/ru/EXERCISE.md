@@ -3,12 +3,12 @@
 ```go
 wg := sync.WaitGroup{}
 
-for i := 0; i < 3; i++ {
-	wg.Add(1)
-	go func() {
-	fmt.Println("Go! " + string(i))
-		wg.Done()
-	}()
+for i := range 3 {
+  wg.Add(1)
+  go func() {
+	fmt.Println("Go! " + strconv.Itoa(i))
+	wg.Done()
+  }()
 }
 
 wg.Wait()

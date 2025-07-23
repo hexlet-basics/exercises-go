@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"sync"
 )
 
@@ -9,10 +10,10 @@ func main() {
 	// BEGIN
 	wg := sync.WaitGroup{}
 
-	for i := 0; i < 3; i++ {
+	for i := range 3 {
 		wg.Add(1)
 		go func() {
-			fmt.Println("Go! " + string(i))
+			fmt.Println("Go! " + strconv.Itoa(i))
 			wg.Done()
 		}()
 	}

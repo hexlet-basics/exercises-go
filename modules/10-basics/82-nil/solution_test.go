@@ -1,4 +1,4 @@
-package main
+package solution
 
 import (
 	"bytes"
@@ -39,8 +39,11 @@ func TestPrintConfig(t *testing.T) {
 			// Выполняем тестируемую функцию
 			PrintConfig(tt.cfg)
 
-			// Закрываем writer и восстанавливаем Stdout
-			w.Close()
+			// Закрываем writer и проверяем ошибку
+			closeErr := w.Close()
+			assert.NoError(t, closeErr)
+
+			// Восстанавливаем Stdout
 			os.Stdout = stdout
 
 			// Читаем перехваченный вывод
