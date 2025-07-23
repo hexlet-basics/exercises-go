@@ -1,5 +1,0 @@
----
-name: Каналы
-tips:
-  - |
-    [Effective Go — Channels](https://golang.org/doc/effective_go#channels)

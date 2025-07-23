@@ -1,6 +1,0 @@
----
-name: Введение в конкурентность
-tips:
-  - >
-    [Concurrency vs
-    Parallelism](https://devopedia.org/concurrency-vs-parallelism)

@@ -1,6 +1,0 @@
----
-name: Копирование срезов
-tips:
-  - >
-    [The Go Programming Language Specification — Appending to and copying
-    slices](https://golang.org/ref/spec#Appending_and_copying_slices)

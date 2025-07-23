@@ -1,6 +1,0 @@
----
-name: Слайсы из срезов
-tips:
-  - >
-    [The Go Programming Language Specification — Slice
-    types](https://golang.org/ref/spec#Slice_types)

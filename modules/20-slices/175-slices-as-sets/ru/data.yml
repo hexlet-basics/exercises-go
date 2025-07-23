@@ -1,0 +1,6 @@
+---
+name: Множественные операции над слайсами
+tips:
+  - >
+    [The Go Programming Language Specification — Slice
+    types](https://golang.org/ref/spec#Slice_types)
