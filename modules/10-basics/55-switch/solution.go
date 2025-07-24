@@ -6,7 +6,6 @@ import (
 
 // BEGIN
 
-// ModifySpaces modifies string s depending on mode.
 func ModifySpaces(s, mode string) string {
 	var replacement string
 

@@ -6,7 +6,6 @@ import (
 
 // BEGIN
 
-// DomainForLocale adds a subdomain to a domain depending on locale.
 func DomainForLocale(domain, locale string) string {
 	if locale == "" {
 		locale = "en"

@@ -34,7 +34,7 @@ func main() {
 }
 ```
 
-Функция exclaim получила доступ к переменной suffix, даже не принимая её как параметр. Это называется замыканием.
+Функция `exclaim()` получила доступ к переменной `suffix`, даже не принимая её как параметр. Это называется замыканием.
 
 ## Пример на будущее: сортировка с анонимной функцией
 
@@ -73,8 +73,8 @@ func MakeMultiplier(factor int) func(int) int {
 func main() {
 	double := MakeMultiplier(2)
 	triple := MakeMultiplier(3)
-
-	fmt.Println(double(4)) // 8
-	fmt.Println(triple(4)) // 12
+ =>
+	fmt.Println(double(4)) // => 8
+	fmt.Println(triple(4)) // => 12
 }
 ```
