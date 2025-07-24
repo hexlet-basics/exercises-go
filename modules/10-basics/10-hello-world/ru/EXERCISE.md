@@ -2,7 +2,7 @@
 
 ```go
 // Определение пакета
-package solution
+package main
 
 // Импорт пакета
 import "fmt"
