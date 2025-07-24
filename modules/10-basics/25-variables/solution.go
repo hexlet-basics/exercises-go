@@ -2,12 +2,12 @@ package solution
 
 import "fmt"
 
-func PrintFullName() {
+func PrintBody() {
 	// BEGIN
 
-	firstName := "John"
-	lastName := "Smith"
-	fmt.Println(firstName, lastName)
+	name := "Go"
+	language, version := "Go", 1.21
+	fmt.Println(name, language, version)
 
 	// END
 }
