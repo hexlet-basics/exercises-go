@@ -15,11 +15,21 @@ Go поддерживает классические логические опе
 Примеры:
 
 ```go
-true && false    // false
-false || true    // true
-!false           // true
-true == true     // true
-false != true    // true
+// false
+true && false
+
+// true
+false || true
+
+// true
+!false
+
+// true
+true == true
+
+// true
+false != true
+
 ```
 
 ## Объявление переменных
@@ -39,7 +49,8 @@ isadmin := false
 
 ```go
 var flag bool
-fmt.Println(flag) // false
+fmt.Println(flag)
+// => false
 ```
 
 ## Строгая типизация
@@ -47,32 +58,46 @@ fmt.Println(flag) // false
 Go — строго типизированный язык. Это значит, что логические значения нельзя смешивать с другими типами. Например, нельзя сравнивать `bool` со строкой или числом:
 
 ```go
-true == "hello" // ошибка компиляции: mismatched types
-true == 1       // тоже ошибка
+// ошибка компиляции: mismatched types
+true == "hello"
+
+// тоже ошибка
+true == 1
 ```
 
 Чтобы проверить, что число не равно нулю, сравнение выполняют явно:
 
 ```go
 count := 5
-isPositive := count > 0    // true
-isZero := count == 0       // false
+
+// true
+isPositive := count > 0
+
+// false
+isZero := count == 0
 ```
 
 Для строк проверка также выполняется явно:
 
 ```go
 text := "Hexlet"
-isEmpty := text == ""      // false
-isNotEmpty := text != ""   // true
+
+// false
+isEmpty := text == ""
+
+// true
+isNotEmpty := text != ""
 ```
 
 Булевы значения можно сравнивать только с булевыми:
 
 ```go
 isActive := true
-fmt.Println(isActive == true)  // true
-fmt.Println(isActive != false) // true
+fmt.Println(isActive == true)
+// =>true
+
+fmt.Println(isActive != false)
+// =>true
 ```
 
 ## Сравнение строк
@@ -86,10 +111,17 @@ Go позволяет сравнивать строки с помощью ста
 Сравнение выполняется побайтно, в соответствии с кодировкой UTF-8.
 
 ```go
-"hexlet" == "hexlet"  // true
-"go" < "golang"       // true
-"beta" > "alpha"      // true
-"foo" != "bar"        // true
+"hexlet" == "hexlet"
+// true
+
+"go" < "golang"
+// true
+
+"beta" > "alpha"
+// true
+
+"foo" != "bar"
+// true
 ```
 
 ## Использование в функциях
@@ -113,12 +145,18 @@ func bothTrue(a, b bool) bool {
 Примеры вызовов:
 
 ```go
-isEmpty("")        // true
-isEmpty("Hexlet")  // false
+isEmpty("")
+// true
+isEmpty("Hexlet")
+// false
 
-isEqual(4, 4)      // true
-isEqual(4, 7)      // false
+isEqual(4, 4)
+// true
+isEqual(4, 7)
+// false
 
-bothTrue(true, false) // false
-bothTrue(true, true)  // true
+bothTrue(true, false)
+// false
+bothTrue(true, true)
+// true
 ```
