@@ -3,7 +3,7 @@ package solution
 // BEGIN
 
 func FilterExpensiveOrders(orders []int, limit int) []int {
-	var result []int
+	result := make([]int, 0) // Инициализируем пустой срез
 	for _, order := range orders {
 		if order > limit {
 			result = append(result, order)
