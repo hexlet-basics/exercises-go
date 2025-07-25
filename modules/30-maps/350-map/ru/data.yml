@@ -1,2 +1,7 @@
 ---
 name: Карты
+tips:
+  - |
+    [Effective Go — Maps](https://go.dev/doc/effective_go#maps)
+  - |
+    [The Go Programming Language Specification — Map](https://go.dev/ref/spec#Map_types)

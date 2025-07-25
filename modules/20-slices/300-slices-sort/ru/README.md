@@ -13,7 +13,7 @@ import (
 func main() {
 	nums := []int{5, 2, 9, 1, 3}
 	slices.Sort(nums)
-	fmt.Println(nums) // [1 2 3 5 9]
+	fmt.Println(nums) // => [1 2 3 5 9]
 }
 ```
 
@@ -28,6 +28,8 @@ slices.Sort(copySlice)
 fmt.Println(original)   // => [5 2 9]
 fmt.Println(copySlice)  // => [2 5 9]
 ```
+
+<!-- FIXME: может тут рассказать про Sorted()? https://pkg.go.dev/slices#Sorted -->
 
 ## Проверка, отсортирован ли срез
 
