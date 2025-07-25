@@ -1,6 +1,7 @@
 ---
 name: Массивы
 tips:
-  - >
-    [The Go Programming Language Specification — Array
-    types](https://golang.org/ref/spec#Array_types)
+  - |
+    [The Go Programming Language Specification — Array types](https://golang.org/ref/spec#Array_types)
+  - |
+    [Effective Go — Array types](https://go.dev/doc/effective_go#arrays)
