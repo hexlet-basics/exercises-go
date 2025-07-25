@@ -46,7 +46,6 @@ for name := range ages {
 // => Alice
 // => Bob
 // => Tom
-
 ```
 
 ## Перебор только значений

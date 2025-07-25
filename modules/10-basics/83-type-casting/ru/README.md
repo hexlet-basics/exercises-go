@@ -14,8 +14,6 @@ var a int = 10
 var b float64 = a // ошибка: нельзя неявно преобразовать int в float64
 ```
 
-<!-- FIXME: было бы здорово показать проверку типа, чтобы его распечатать -->
-
 ## Преобразование float64 в int
 
 ```go
@@ -69,8 +67,6 @@ s := fmt.Sprintf("%v", flag)
 fmt.Println(s) // "true"
 ```
 
-<!-- FIXME: пре печати кавычек не будет, поэтому вмозожно лучше показать тип через его печать -->
-
 ## Ошибки при несовместимых типах
 
 Go не делает неявных преобразований между несовместимыми типами:
@@ -79,9 +75,9 @@ Go не делает неявных преобразований между не
 var x int = 10
 var y uint = uint(x) // допустимо: явное преобразование
 
+// Компилятор выдаст предупреждение
+// conversion from int to string yields a string of one rune, not a string of digits
 var z string = string(x)
 fmt.Println(z) // символ с кодом 10, а не "10"
 fmt.Println(y)
 ```
-
-<!-- FIXME: тут код не сработает - ./prog.go:17:17: conversion from int to string yields a string of one rune, not a string of digits, https://go.dev/play/p/Gc5Ue7r1Sfo -->
