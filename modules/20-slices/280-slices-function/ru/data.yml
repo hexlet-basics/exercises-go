@@ -1,6 +1,5 @@
 ---
 name: Передача срезов в функцию
 tips:
-  - >
-    [The Go Programming Language Specification — Slice
-    types](https://golang.org/ref/spec#Slice_types)
+  - |
+    [The Go Programming Language Specification — Slice types](https://golang.org/ref/spec#Slice_types)
