@@ -1,4 +1,5 @@
 ---
 name: Анонимные функции (Лямбды)
+tips:
   - |
     [Function literals](https://go.dev/ref/spec#Function_literals)
