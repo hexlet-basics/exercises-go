@@ -1,7 +1,6 @@
-Реализуйте функцию `CompareProductLists(oldList, newList []string) (added, removed []string)`,  
-которая сравнивает два списка товаров и возвращает два среза:  
+Реализуйте функцию `CompareProductLists(oldList, newList []string) (added, removed []string)`, которая сравнивает два списка товаров и возвращает два среза:
 
-- `added` — товары, появившиеся в `newList`, которых не было в `oldList`.  
+- `added` — товары, появившиеся в `newList`, которых не было в `oldList`.
 - `removed` — товары, которые были в `oldList`, но отсутствуют в `newList`.
 
 Порядок элементов в результатах не имеет значения.

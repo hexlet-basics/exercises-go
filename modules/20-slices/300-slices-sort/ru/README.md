@@ -2,7 +2,7 @@
 
 ## Сортировка по возрастанию
 
-Для сортировки среза с элементами любого упорядоченного типа (например, `int`, `string`) используется функция `slices.Sort`:
+Для сортировки среза с элементами любого упорядоченного типа (например, `int`, `string`) используется функция `slices.Sort()`:
 
 ```go
 import (
@@ -19,25 +19,23 @@ func main() {
 
 ## Изменяется ли исходный срез?
 
-Важно помнить, что функции сортировки из пакета `slices` **изменяют исходный срез на месте**.  
-Это значит, что после вызова `slices.Sort(nums)` срез `nums` будет отсортирован, и не создаётся новый срез.  
-Если нужен новый срез, сначала создайте копию:
+Важно помнить, что функции сортировки из пакета `slices` **изменяют исходный срез на месте**. Это значит, что после вызова `slices.Sort(nums)` срез `nums` будет отсортирован, и не создаётся новый срез. Если нужен новый срез, сначала создайте копию:
 
 ```go
 original := []int{5, 2, 9}
 copySlice := slices.Clone(original)
 slices.Sort(copySlice)
-fmt.Println(original)   // [5 2 9]
-fmt.Println(copySlice)  // [2 5 9]
+fmt.Println(original)   // => [5 2 9]
+fmt.Println(copySlice)  // => [2 5 9]
 ```
 
 ## Проверка, отсортирован ли срез
 
-Иногда нужно проверить, находится ли срез в порядке возрастания. Для этого есть `slices.IsSorted`:
+Иногда нужно проверить, находится ли срез в порядке возрастания. Для этого есть `slices.IsSorted()`:
 
 ```go
 nums := []int{1, 2, 3}
-fmt.Println(slices.IsSorted(nums)) // true
+fmt.Println(slices.IsSorted(nums)) // => true
 ```
 
 ## Сортировка строк
@@ -47,21 +45,22 @@ fmt.Println(slices.IsSorted(nums)) // true
 ```go
 words := []string{"banana", "apple", "cherry"}
 slices.Sort(words)
-fmt.Println(words) // [apple banana cherry]
+fmt.Println(words) // => [apple banana cherry]
 ```
 
 Сортировка выполняется в лексикографическом порядке (по Unicode-кодам символов).
 
 ## Сортировка с пользовательской логикой
 
-Если нужно задать собственное правило сортировки, можно использовать `slices.SortFunc`.  
+Если нужно задать собственное правило сортировки, можно использовать `slices.SortFunc()`.
 Например, сортировка строк по длине:
 
 ```go
 slices.SortFunc(words, func(a, b string) int {
+	// по длине
 	return len(a) - len(b)
 })
-fmt.Println(words) // [apple banana cherry] (по длине)
+fmt.Println(words) // => [apple banana cherry]
 ```
 
 Функция-компаратор должна возвращать:
@@ -75,13 +74,13 @@ fmt.Println(words) // [apple banana cherry] (по длине)
 Чтобы отсортировать в обратном порядке, можно:
 
 1. Отсортировать по возрастанию.
-2. Развернуть срез с помощью `slices.Reverse`.
+2. Развернуть срез с помощью `slices.Reverse()`.
 
 ```go
 nums := []int{5, 2, 9, 1, 3}
 slices.Sort(nums)
 slices.Reverse(nums)
-	fmt.Println(nums) // [9 5 3 2 1]
+fmt.Println(nums) // => [9 5 3 2 1]
 ```
 
 ## Минимальные и максимальные значения
@@ -90,13 +89,13 @@ slices.Reverse(nums)
 
 ```go
 nums := []int{5, 2, 9, 1, 3}
-fmt.Println(slices.Min(nums)) // 1
-fmt.Println(slices.Max(nums)) // 9
+fmt.Println(slices.Min(nums)) // => 1
+fmt.Println(slices.Max(nums)) // => 9
 ```
 
 ## Вывод
 
-- **Функции `slices.Sort` и `slices.SortFunc` изменяют исходный срез.**
+- **Функции `slices.Sort()` и `slices.SortFunc()` изменяют исходный срез.**
 - Если нужен новый отсортированный срез, используйте `slices.Clone()` перед сортировкой.
 - Для кастомных правил сортировки — `slices.SortFunc()`.
 - Проверить порядок можно через `slices.IsSorted()`.

@@ -1,6 +1,7 @@
 ---
 name: Множественные операции над слайсами
 tips:
-  - >
-    [The Go Programming Language Specification — Slice
-    types](https://golang.org/ref/spec#Slice_types)
+  - |
+    [The Go Programming Language Specification — Slice types](https://golang.org/ref/spec#Slice_types)
+  - |
+    [lo — библиотека для создания множеств в Go]([lo](https://github.com/samber/lo))
