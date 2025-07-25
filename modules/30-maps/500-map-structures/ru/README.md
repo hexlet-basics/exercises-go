@@ -61,9 +61,22 @@ fmt.Println(users[1].Name) // Alicia — оригинал изменился
 Перебор элементов ничем не отличается от обычных карт:
 
 ```go
+type User struct {
+	Name  string
+	Email string
+}
+
+users := map[int]*User{
+	1: {Name: "Alice", Email: "alice@example.com"},
+	2: {Name: "Bob", Email: "bob@example.com"},
+}
+
 for id, user := range users {
 	fmt.Printf("ID=%d, Name=%s\n", id, user.Name)
 }
+
+// => ID=1, Name=Alice
+// => ID=2, Name=Bob
 ```
 
-Если карта хранит указатели, цикл будет работать аналогично, только `user` уже будет указателем
+Если карта хранит указатели, цикл будет работать аналогично, только `user` уже будет указателем.

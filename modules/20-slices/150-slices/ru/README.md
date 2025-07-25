@@ -149,7 +149,7 @@ func squares(n int) []int {
 
 func main() {
 	result := squares(5)
-	fmt.Println(result) // [1 4 9 16 25]
+	fmt.Println(result) // => [1 4 9 16 25]
 }
 ```
 
