@@ -18,7 +18,7 @@ users := map[int]User{
 	1: {Name: "Alice", Email: "alice@example.com"},
 	2: {Name: "Bob", Email: "bob@example.com"},
 }
-fmt.Println(users[1]) // {Alice alice@example.com}
+fmt.Println(users[1]) // => {Alice alice@example.com}
 ```
 
 ## Проблема копий
@@ -28,7 +28,7 @@ fmt.Println(users[1]) // {Alice alice@example.com}
 ```go
 user := users[1]
 user.Name = "Alicia"
-fmt.Println(users[1].Name) // Alice — оригинал не изменился
+fmt.Println(users[1].Name) // => Alice — оригинал не изменился
 ```
 
 Чтобы изменить данные в карте, нужно явно присвоить изменённую структуру обратно:
@@ -37,7 +37,7 @@ fmt.Println(users[1].Name) // Alice — оригинал не изменился
 user := users[1]
 user.Name = "Alicia"
 users[1] = user
-fmt.Println(users[1].Name) // Alicia
+fmt.Println(users[1].Name) // => Alicia
 ```
 
 ## Использование указателей
