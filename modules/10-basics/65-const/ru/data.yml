@@ -1,12 +1,9 @@
 ---
 name: Константы
 tips:
-  - >
-    [The Go Programming Language Specification —
-    Constant](https://golang.org/ref/spec#Constants)
-  - >
-    [The Go Programming Language Specification — Constant
-    declarations](https://golang.org/ref/spec#Constant_declarations)
-  - >
-    [The Go Programming Language Specification —
-    Iota](https://golang.org/ref/spec#Iota)
+  - |
+    [The Go Programming Language Specification — Constant](https://golang.org/ref/spec#Constants)
+  - |
+    [The Go Programming Language Specification — Constant declarations](https://golang.org/ref/spec#Constant_declarations)
+  - |
+    [The Go Programming Language Specification — Iota](https://golang.org/ref/spec#Iota)

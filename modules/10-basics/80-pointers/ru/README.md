@@ -22,7 +22,8 @@ func change(n int) {
 func main() {
 	x := 5
 	change(&x)
-	fmt.Println(x) // 10 — изменилось
+	// изменилось
+	fmt.Println(x) // => 10
 }
 
 func change(number *int) {
@@ -69,7 +70,8 @@ func rename(user User) {
 func main() {
 	u := User{Name: "Боб"}
 	rename(u)
-	fmt.Println(u.Name) // Боб — не изменилось
+	// Имя не изменилось
+	fmt.Println(u.Name) // => Боб
 }
 ```
 
@@ -85,7 +87,8 @@ func rename(user *User) {
 func main() {
 	u := User{Name: "Боб"}
 	rename(&u)
-	fmt.Println(u.Name) // Алиса — изменилось
+	// Имя изменилось
+	fmt.Println(u.Name) // => Алиса
 }
 ```
 

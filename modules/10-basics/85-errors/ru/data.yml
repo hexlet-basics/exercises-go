@@ -1,2 +1,5 @@
 ---
 name: Ошибки
+tips:
+  - |
+    [Errors](https://go.dev/doc/effective_go#errors)

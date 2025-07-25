@@ -1,6 +1,5 @@
 ---
 name: Альтернативная условная конструкция
 tips:
-  - >
-    [The Go Programming Language Specification — Switch
-    statements](https://go.dev/ref/spec#Switch_statements)
+  - |
+    [The Go Programming Language Specification — Switch statements](https://go.dev/ref/spec#Switch_statements)

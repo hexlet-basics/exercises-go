@@ -1,2 +1,7 @@
 ---
 name: Структуры и методы в Go
+tips:
+  - |
+    [Struct types](https://go.dev/ref/spec#Struct_types)
+  - |
+    [Interfaces and methods](https://go.dev/doc/effective_go#interface_methods)

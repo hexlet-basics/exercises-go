@@ -26,7 +26,7 @@ user := User{
 К полям структуры можно обращаться напрямую:
 
 ```go
-fmt.Println(user.Name) // Alice
+fmt.Println(user.Name) // => Alice
 user.Age = 31
 ```
 
@@ -44,7 +44,7 @@ func (u User) Greet() string {
 
 ```go
 user := User{Name: "Alice", Age: 30}
-fmt.Println(user.Greet()) // Hi, I'm Alice
+fmt.Println(user.Greet()) // => Hi, I'm Alice
 ```
 
 ## Где описывать методы?
@@ -67,7 +67,7 @@ func (u User) Greet() string {
 
 func main() {
 	user := User{Name: "Bob"}
-	fmt.Println(user.Greet())
+	fmt.Println(user.Greet()) // => Hi, I'm Bob
 }
 ```
 
@@ -98,10 +98,12 @@ func main() {
 	user := User{Name: "Alice", Age: 30}
 
 	ChangeName(user)
-	fmt.Println(user.Name) // Alice — не изменилось
+	// не изменилось
+	fmt.Println(user.Name) // => Alice
 
 	user.ResetName()
-	fmt.Println(user.Name) // Alice — не изменилось
+	// не изменилось
+	fmt.Println(user.Name) // => Alice
 }
 ```
 

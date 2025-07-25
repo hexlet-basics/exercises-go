@@ -1,2 +1,7 @@
 ---
 name: Генерация строк в циклах
+tips:
+  - |
+    [String concatenation](https://go.dev/ref/spec#String_concatenation)
+  - |
+    [strings.Builder](https://pkg.go.dev/strings#Builder)

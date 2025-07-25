@@ -44,7 +44,7 @@ func NewUserPtr(name string, age int) *User {
 func main() {
 	user := NewUserPtr("Bob", 25)
 	user.Age++
-	fmt.Println(user.Age) // 26
+	fmt.Println(user.Age) // => 26
 }
 ```
 

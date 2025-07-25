@@ -50,8 +50,8 @@ const defaultStatus = 200 // пакетная область
 func main() {
 	const status = 404 // локальная область
 
-	fmt.Println(defaultStatus) // 200
-	fmt.Println(status)        // 404
+	fmt.Println(defaultStatus) // => 200
+	fmt.Println(status)        // => 404
 }
 ```
 

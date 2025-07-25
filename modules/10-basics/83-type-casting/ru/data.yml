@@ -1,2 +1,7 @@
 ---
-name: Указатели
+name: Преобразование типов
+tips:
+  - |
+    Пакет [strconv](https://pkg.go.dev/strconv) реализует преобразования в строковые представления основных типов данных и обратно.
+  - |
+    [Type switch](https://go.dev/doc/effective_go#type_switch)
