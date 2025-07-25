@@ -1,5 +1,5 @@
 ---
 name: Полезные функции для строк
 tips:
-  - >
-    [Коллекция полезных функция для строк](https://github.com/samber/lo)
+  - |
+    [Go Standard Library — strings](https://pkg.go.dev/strings)

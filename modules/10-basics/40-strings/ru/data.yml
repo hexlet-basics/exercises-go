@@ -1,8 +1,5 @@
 ---
 name: Строки
 tips:
-  - >
-    [The Go Programming Language Specification — String
-    types](https://go.dev/ref/spec#String_types)
   - |
-    [Go Standard Library — strings](https://pkg.go.dev/strings)
+    [The Go Programming Language Specification — String types](https://go.dev/ref/spec#String_types)

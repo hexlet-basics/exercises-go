@@ -60,8 +60,15 @@ strings.TrimSpace("  hello\n") // "hello"
 ```go
 text := "golang"
 
-fmt.Println(text[0:2]) // "go"  (символы с позиции 0 до 2, не включая 2)
-fmt.Println(text[:4])  // "gola" (от начала до позиции 4)
-fmt.Println(text[3:])  // "ang"  (от позиции 3 до конца строки)
-fmt.Println(text[:])   // "golang" (вся строка)
+// символы с позиции 0 до 2, не включая 2
+fmt.Println(text[0:2]) // => "go"
+
+// от начала до позиции 4
+fmt.Println(text[:4])  // => "gola"
+
+// от позиции 3 до конца строки
+fmt.Println(text[3:])  // => "ang"
+
+// вся строка
+fmt.Println(text[:])   // => "golang"
 ```

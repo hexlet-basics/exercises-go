@@ -1,3 +1,5 @@
 ---
 name: Логический тип
-tips: []
+tips:
+  - |
+    [The Go Programming Language Specification - Boolean types](https://go.dev/ref/spec#Boolean_types)

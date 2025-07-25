@@ -1,6 +1,5 @@
 ---
 name: Условные конструкции
 tips:
-  - >
-    [The Go Programming Language Specification — If
-    statements](https://go.dev/ref/spec#If_statements)
+  - |
+    [The Go Programming Language Specification — If statements](https://go.dev/ref/spec#If_statements)
