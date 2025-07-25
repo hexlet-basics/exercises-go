@@ -15,7 +15,6 @@ const (
 	UnknownCode
 )
 
-// ErrorMessageToCode returns a gRPC error code depending on error message.
 func ErrorMessageToCode(msg string) int {
 	switch msg {
 	case OkMsg:

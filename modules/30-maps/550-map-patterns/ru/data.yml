@@ -2,4 +2,6 @@
 name: Практики использования карт
 tips:
   - |
-    [Go by Example: Range](https://gobyexample.com/range)
+    [samber/lo](https://github.com/samber/lo) - библиотека с полезными функциями для слайсов, карт и не только для них
+  - |
+    [maps](https://pkg.go.dev/maps) - встроенные функции для работы с мапами.

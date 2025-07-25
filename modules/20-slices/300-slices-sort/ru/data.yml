@@ -2,4 +2,4 @@
 name: Сортировка срезов
 tips:
   - |
-    [Стандартные пакеты в Go — sort](https://pkg.go.dev/sort)
+    [Функция slices.Sort()](https://pkg.go.dev/slices#Sort)

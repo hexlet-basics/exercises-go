@@ -1,6 +1,7 @@
 ---
 name: Срезы
 tips:
-  - >
-    [The Go Programming Language Specification — Slice
-    types](https://golang.org/ref/spec#Slice_types)
+  -|
+    [The Go Programming Language Specification — Slice types](https://golang.org/ref/spec#Slice_types)
+  - |
+    [Effective Go — Slices types](https://go.dev/doc/effective_go#slices)

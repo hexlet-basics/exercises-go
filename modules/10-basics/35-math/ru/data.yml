@@ -1,6 +1,5 @@
 ---
 name: Математика и числа
 tips:
-  - >
-    [The Go Programming Language Specification - Numeric
-    Types](https://go.dev/ref/spec#Numeric_types)
+  - |
+    [The Go Programming Language Specification - Numeric Types](https://go.dev/ref/spec#Numeric_types)

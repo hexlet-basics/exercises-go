@@ -14,8 +14,8 @@ import (
 
 func main() {
 	nums := []int{1, 2, 3}
-	fmt.Println(slices.Contains(nums, 2)) // true
-	fmt.Println(slices.Contains(nums, 5)) // false
+	fmt.Println(slices.Contains(nums, 2)) // => true
+	fmt.Println(slices.Contains(nums, 5)) // => false
 }
 ```
 
@@ -28,19 +28,19 @@ import "github.com/samber/lo"
 
 nums := []int{2, 1, 2, 3, 1}
 unique := lo.Uniq(nums)
-fmt.Println(unique) // [2 1 3]
+fmt.Println(unique) // => [2 1 3]
 ```
 
 ## Объединение (union)
 
-Стандартный пакет `slices` не предоставляет функции объединения, поэтому используем `lo.Union`:
+Стандартный пакет `slices` не предоставляет функции объединения, поэтому используем `lo.Union()`:
 
 ```go
 a := []int{1, 2, 3}
 b := []int{3, 4, 5}
 
 all := lo.Union(a, b)
-fmt.Println(all) // [1 2 3 4 5]
+fmt.Println(all) // => [1 2 3 4 5]
 ```
 
 ## Пересечение (intersection)
@@ -52,7 +52,7 @@ a := []int{1, 2, 3}
 b := []int{2, 3, 4}
 
 common := lo.Intersect(a, b)
-fmt.Println(common) // [2 3]
+fmt.Println(common) // => [2 3]
 ```
 
 ## Разность (difference)
@@ -64,12 +64,12 @@ a := []int{1, 2, 3}
 b := []int{2, 4}
 
 onlyA, _ := lo.Difference(a, b)
-fmt.Println(onlyA) // [1 3]
+fmt.Println(onlyA) // => [1 3]
 ```
 
 ## Симметрическая разность
 
-Симметрическая разность — это элементы, которые есть в одном из срезов, но не в обоих.  
+Симметрическая разность — это элементы, которые есть в одном из срезов, но не в обоих.
 Её можно получить через `lo.Difference()`, комбинируя оба результата:
 
 ```go
@@ -78,7 +78,7 @@ b := []int{2, 4}
 
 onlyA, onlyB := lo.Difference(a, b)
 symDiff := append(onlyA, onlyB...)
-fmt.Println(symDiff) // [1 3 4]
+fmt.Println(symDiff) // => [1 3 4]
 ```
 
 ## Вывод

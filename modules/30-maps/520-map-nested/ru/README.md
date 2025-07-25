@@ -16,7 +16,7 @@ settings := map[string]map[string]string{
 	},
 }
 
-fmt.Println(settings["alice"]["theme"]) // dark
+fmt.Println(settings["alice"]["theme"]) // => dark
 ```
 
 В этом примере:
@@ -27,6 +27,8 @@ fmt.Println(settings["alice"]["theme"]) // dark
 ## Добавление элементов
 
 Чтобы добавить новый набор настроек для пользователя:
+
+<!-- FIXME: как будто бы тут недописано. -->
 
 ```go
 settings["charlie"] = map[string]string{
@@ -39,41 +41,57 @@ settings["charlie"] = map[string]string{
 
 ```go
 settings["alice"]["lang"] = "ru"
-fmt.Println(settings["alice"]) // map[lang:ru theme:dark]
+fmt.Println(settings["alice"]) // => map[lang:ru theme:dark]
 ```
 
 ## Инициализация вложенной карты
 
-Если вложенная карта для пользователя ещё не создана, при обращении к ней будет возвращён `nil`.  
+Если вложенная карта для пользователя ещё не создана, при обращении к ней будет возвращён `nil`.
 Перед добавлением в такую карту её нужно инициализировать:
 
 ```go
 user := "david"
+
+fmt.Println(settings[user] == nil) // => true
+
 if settings[user] == nil {
 	settings[user] = make(map[string]string)
 }
 settings[user]["theme"] = "light"
+
+fmt.Println(settings[user] == nil) // => false
 ```
 
 ## Удаление элементов
 
-Удалить одну настройку пользователя:
+Удаление вложенного элемента карты можно выполнить с `delete()`:
 
-```go
-delete(settings["bob"], "lang")
-```
+* Удалить одну настройку пользователя:
+    ```go
+    delete(settings["bob"], "lang")
+    ```
 
-Удалить все настройки пользователя:
-
-```go
-delete(settings, "alice")
-```
+* Удалить все настройки пользователя:
+    ```go
+    delete(settings, "alice")
+    ```
 
 ## Перебор вложенных карт
 
 Можно пройтись по всем пользователям и их настройкам:
 
 ```go
+settings := map[string]map[string]string{
+	"alice": {
+		"theme": "dark",
+		"lang":  "en",
+	},
+	"bob": {
+		"theme": "light",
+		"lang":  "fr",
+	},
+}
+
 for user, userSettings := range settings {
 	fmt.Printf("User: %s\n", user)
 	for key, value := range userSettings {

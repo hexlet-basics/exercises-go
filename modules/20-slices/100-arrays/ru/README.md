@@ -8,8 +8,8 @@
 var nums [5]int
 ```
 
-- Тип: массив из пяти `int`
-- Все значения инициализируются нулями (`0` для `int`)
+- Тип: массив из пяти `int`.
+- Все значения инициализируются нулями (`0` для `int`).
 
 Можно использовать короткую форму:
 
@@ -55,11 +55,11 @@ nums := [...]int{10, 20, 30} // длина будет равна 3
 ```go
 nums := [3]int{1, 2, 3}
 
-fmt.Println(nums[1]) // 2
+fmt.Println(nums[1]) // => 2
 
 nums[2] = 33
 
-fmt.Println(nums) // [1 2 33]
+fmt.Println(nums) // => [1 2 33]
 ```
 
 Обращение за пределы массива вызывает ошибку компиляции:
@@ -74,8 +74,8 @@ words[2] // ошибка: index 2 out of bounds [0:2]
 Go предоставляет встроенную функцию `len()` для получения длины массива. Эта длина известна во время компиляции и не меняется.
 
 ```go
-fmt.Println(len([5]int{1, 2, 3})) // 5
-fmt.Println(len([10]int{}))	  // 10
+fmt.Println(len([5]int{1, 2, 3})) // => 5
+fmt.Println(len([10]int{}))	      // => 10
 ```
 
 ## Передача и возврат из функции
@@ -91,8 +91,11 @@ func modify(items [3]int) [3]int {
 func main() {
 	a := [3]int{1, 2, 3}
 	b := modify(a)
-	fmt.Println(a) // [1 2 3]  (оригинал не изменился)
-	fmt.Println(b) // [100 2 3] (результат функции)
+	// оригинал не изменился
+	fmt.Println(a) // => [1 2 3]
+
+	// результат функции
+	fmt.Println(b) // [100 2 3]
 }
 ```
 
@@ -114,7 +117,7 @@ func reverse(text [5]rune) [5]rune {
 func main() {
 	text := [5]rune{'п', 'р', 'и', 'в', 'е'}
 	reversed := reverse(text)
-	fmt.Println(string(reversed[:])) // "евирп"
+	fmt.Println(string(reversed[:])) // => "евирп"
 }
 ```
 

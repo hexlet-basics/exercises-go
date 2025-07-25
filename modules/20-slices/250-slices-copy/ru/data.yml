@@ -1,2 +1,5 @@
 ---
 name: Копирование срезов
+tips:
+  - Функция [Clone()](https://pkg.go.dev/slices#Clone) из модуля slices для копирования слайса
+  - Встроенная функция [copy()](https://pkg.go.dev/builtin#copy) для копирования элементов из одного слайса в другой

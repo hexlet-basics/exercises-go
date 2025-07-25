@@ -16,6 +16,8 @@ age := 18
 if age >= 18 {
 	fmt.Println("Access granted")
 }
+
+// => Access granted
 ```
 
 ## Условие else
@@ -23,11 +25,15 @@ if age >= 18 {
 Если нужно выполнить другой код в случае, когда условие ложно (`false`), добавляется блок `else`:
 
 ```go
+age := 14
+
 if age >= 18 {
 	fmt.Println("Access granted")
 } else {
 	fmt.Println("Access denied")
 }
+
+// => Access denied
 ```
 
 Когда условий больше двух, можно использовать цепочку `else if`:
@@ -42,19 +48,20 @@ if score >= 90 {
 } else {
 	fmt.Println("Grade: C or lower")
 }
+
+// Grade: B
 ```
 
-## Особенности `if` в Go
+## Особенности if в Go
 
 - В Go не ставятся круглые скобки вокруг условия.
 - Тело `if` обязательно должно быть в фигурных скобках `{}`, даже если там одна строка.
 - Условие должно быть логического типа `bool`. Например, такой код вызовет ошибку компиляции:
-
-  ```go
-  if 1 {
-      fmt.Println("Ошибка")
-  }
-  ```
+    ```go
+    if 1 {
+        fmt.Println("Ошибка") //  non-boolean condition in if statement
+    }
+    ```
 
 ## Логические выражения в условиях
 
@@ -67,6 +74,7 @@ isRegistered := true
 if age >= 18 && isRegistered {
 	fmt.Println("Access granted")
 }
+// => Access granted
 ```
 
 ## Краткая форма объявления переменной
@@ -75,11 +83,14 @@ Go позволяет объявить переменную прямо в усл
 
 ```go
 if n := len("hello"); n > 3 {
-    fmt.Println("String is long enough:", n)
+	// n существует
+	fmt.Println("String is long enough:", n)
 } else {
-    fmt.Println("String too short")
+	// и здесь n существует тоже
+	fmt.Println("String too short:", n)
 }
 // Здесь n уже не существует
+// => String is long enough: 5
 ```
 
 ## Отсутствие тернарного оператора
@@ -97,4 +108,6 @@ if age >= 18 {
 }
 
 fmt.Println(status)
+
+// => minor
 ```

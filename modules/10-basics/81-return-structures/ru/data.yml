@@ -1,2 +1,5 @@
 ---
 name: Возврат структур из функций
+tips:
+  - |
+    [Pointers vs. Values](https://go.dev/doc/effective_go#pointers_vs_values)

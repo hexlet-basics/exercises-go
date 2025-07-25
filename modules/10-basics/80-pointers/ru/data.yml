@@ -1,2 +1,5 @@
 ---
 name: Указатели
+tips:
+  - |
+    [Address operators](https://go.dev/ref/spec#Address_operators)

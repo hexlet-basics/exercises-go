@@ -1,8 +1,7 @@
 ---
 name: Переменные
 tips:
-  - >
-    [The Go Programming Language Specification -
-    Variables](https://go.dev/ref/spec#Variables)
+  - |
+    [The Go Programming Language Specification - Variables](https://go.dev/ref/spec#Variables)
   - |
     [Effective Go - Variables](https://go.dev/doc/effective_go#variables)

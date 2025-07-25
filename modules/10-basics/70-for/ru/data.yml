@@ -1,2 +1,5 @@
 ---
 name: Цикл For
+tips:
+  - |
+    [The Go Programming Language Specification — For](https://go.dev/doc/effective_go#for)

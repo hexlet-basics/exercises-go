@@ -22,7 +22,8 @@ func change(n int) {
 func main() {
 	x := 5
 	change(&x)
-	fmt.Println(x) // 10 — изменилось
+	// изменилось
+	fmt.Println(x) // => 10
 }
 
 func change(number *int) {
@@ -46,7 +47,7 @@ func change(number *int) {
 
 ```go
 x := 42
-ptr := &x       // адрес переменной
+ptr := &x         // адрес переменной
 fmt.Println(ptr)  // например, 0xc00001a0a8
 fmt.Println(*ptr) // 42 — значение по адресу
 ```
@@ -69,7 +70,8 @@ func rename(user User) {
 func main() {
 	u := User{Name: "Боб"}
 	rename(u)
-	fmt.Println(u.Name) // Боб — не изменилось
+	// Имя не изменилось
+	fmt.Println(u.Name) // => Боб
 }
 ```
 
@@ -85,7 +87,8 @@ func rename(user *User) {
 func main() {
 	u := User{Name: "Боб"}
 	rename(&u)
-	fmt.Println(u.Name) // Алиса — изменилось
+	// Имя изменилось
+	fmt.Println(u.Name) // => Алиса
 }
 ```
 
@@ -94,8 +97,8 @@ func main() {
 Go также позволяет обращаться к полям структуры через указатель без явного разыменования:
 
 ```go
-user.Name = "..."         // работает
-(*user).Name = "..."      // тоже работает
+user.Name = "..."    // работает
+(*user).Name = "..." // тоже работает
 ```
 
 Это сделано для удобства — компилятор сам вставляет `*`, если это безопасно.
