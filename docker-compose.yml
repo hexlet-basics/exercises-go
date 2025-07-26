@@ -3,5 +3,4 @@
 services:
   exercises:
     build: .
-    image: hexletbasics/exercises-go:cached
     command: make check
