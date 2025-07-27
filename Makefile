@@ -40,3 +40,9 @@ ci-check:
 
 compose-code-lint:
 	docker compose run --rm exercises make code-lint
+
+docker-build:
+	docker build -t ghcr.io/hexlet-basics/exercises-go:latest .
+
+docker-push:
+	docker push ghcr.io/hexlet-basics/exercises-go:latest
