@@ -1,7 +1,7 @@
 ---
 
 language:
-  docker_image: "hexletbasics/exercises-go"
+  docker_image: "ghcr.io/hexlet-basics/exercises-go"
   extension: go
   exercise_filename: solution.go
   exercise_test_filename: solution_test.go
