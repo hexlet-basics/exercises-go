@@ -14,4 +14,4 @@ WORKDIR /exercises-go
 
 COPY . .
 
-RUN go mod vendor
+RUN go mod download
