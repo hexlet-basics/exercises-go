@@ -5,7 +5,9 @@
 
 Функция должна возвращать строку в следующем формате:
 
-    Hello, <имя>! You have <число> new messages.
+```text
+Hello, <имя>! You have <число> new messages.
+```
 
 **Примеры**
 
