@@ -12,9 +12,9 @@ func multiply(x int, y int) int {
 - `multiply` — имя функции;
 - `(x int, y int)` — параметры с указанием типов. Если несколько параметров подряд имеют одинаковый тип, запись можно сократить:
 
-  ```go
-  func multiply(x, y int) int
-  ```
+```go
+func multiply(x, y int) int
+```
 
 - `int` — возвращаемый тип;
 - `{ ... }` — тело функции.
