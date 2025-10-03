@@ -61,7 +61,8 @@ count /= 4  // count = 6
 Конвертировать значения между числовыми типами можно, но с ограничениями:
 
 ```go
-x := int64(5.99) // округляется вниз → 5
+x := int64(5.99) // ошибка компиляции: constant 5.99 truncated to integer
+x := int64(math.round(5.99)) -> 6
 x := int64(5.05) // ошибка компиляции: constant 5.05 truncated to integer
 x := uint(-5) // ошибка компиляции: constant -5 overflows uint
 ```
