@@ -120,11 +120,11 @@ func changeAndReturn(s []int) []int {
 }
 
 func main() {
-    data := []int{1, 2, 3}
-    result := changeAndReturn(data)
-    fmt.Println(result) // => [999 2 3]
-    // изменения видны и в оригинале
-    fmt.Println(data)   // => [999 2 3]
+	data := []int{1, 2, 3}
+	result := changeAndReturn(data)
+	fmt.Println(result) // => [999 2 3]
+	// изменения видны и в оригинале
+	fmt.Println(data)   // => [999 2 3]
 }
 ```
 
