@@ -46,8 +46,8 @@ fmt.Println(users[1].Name) // => Alicia
 
 ```go
 users := map[int]*User{
-	1: {Name: "Alice", Email: "alice@example.com"},
-	2: {Name: "Bob", Email: "bob@example.com"},
+	1: &User{Name: "Alice", Email: "alice@example.com"},
+	2: &User{Name: "Bob", Email: "bob@example.com"},
 }
 
 users[1].Name = "Alicia"
@@ -67,8 +67,8 @@ type User struct {
 }
 
 users := map[int]*User{
-	1: {Name: "Alice", Email: "alice@example.com"},
-	2: {Name: "Bob", Email: "bob@example.com"},
+	1: &User{Name: "Alice", Email: "alice@example.com"},
+	2: &User{Name: "Bob", Email: "bob@example.com"},
 }
 
 for id, user := range users {
