@@ -40,7 +40,7 @@ strings.Replace("foo bar foo", "foo", "baz", -1) // "baz bar baz"
 ## Повторение строки
 
 ```go
-strings.Repeat("na", 3) // "nananana"
+strings.Repeat("na", 3) // "nanana"
 ```
 
 Функция `Repeat` возвращает новую строку, повторяя исходную указанное число раз. Если указать 0 — вернётся пустая строка.
