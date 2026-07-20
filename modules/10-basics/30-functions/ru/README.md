@@ -25,7 +25,7 @@ func multiply(x int, y int) int {
 
 В Go не поддерживаются параметры по умолчанию, в отличие от многих других языков программирования. То есть, если функция принимает два аргумента, вы обязаны передать оба значения при вызове.
 
-В языках где нет параметров по умолчанию, часто, применяют подход с созданием функции-обертки, которая позволяет эмулировать это поведение. Допустим, у нас есть функция `getGreeting(name, greeting string)`, которая формирует приветствие:
+В языках где нет параметров по умолчанию, часто, применяют подход с созданием функции-обертки, которая позволяет эмулировать это поведение. Допустим, у нас есть функция `GetGreeting(name, greeting string)`, которая формирует приветствие:
 
 ```go
 func GetGreeting(name string, greeting string) string {
@@ -38,7 +38,7 @@ func GetGreeting(name string, greeting string) string {
 ```go
 // Обёртка: использует "Hello" как greeting по умолчанию
 func GetGreetingDefault(name string) string {
-	return getGreeting(name, "Hello")
+	return GetGreeting(name, "Hello")
 }
 ```
 
