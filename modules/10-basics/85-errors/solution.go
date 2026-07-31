@@ -1,8 +1,8 @@
 package solution
 
-import "fmt"
-
 // BEGIN
+
+import "fmt"
 
 func GetFileExtension(filename string) (string, error) {
 	for i := len(filename) - 1; i >= 0; i-- {

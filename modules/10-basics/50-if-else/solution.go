@@ -1,10 +1,10 @@
 package solution
 
+// BEGIN
+
 import (
 	"fmt"
 )
-
-// BEGIN
 
 func DomainForLocale(domain, locale string) string {
 	if locale == "" {
