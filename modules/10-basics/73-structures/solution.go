@@ -1,8 +1,8 @@
 package solution
 
-import "fmt"
-
 // BEGIN
+
+import "fmt"
 
 type Package struct {
 	ID        string

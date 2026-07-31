@@ -1,23 +1,39 @@
-package main
+package solution
 
 import (
 	"fmt"
 	"strconv"
 	"sync"
+	"time"
 )
 
-func main() {
-	// BEGIN
+// work изображает медленную работу: ждёт 100 миллисекунд и печатает номер
+func work(n int) {
+	time.Sleep(100 * time.Millisecond)
+	fmt.Println("Go! " + strconv.Itoa(n))
+}
+
+func RunAll() {
 	wg := sync.WaitGroup{}
 
-	for i := range 3 {
-		wg.Add(1)
-		go func() {
-			fmt.Println("Go! " + strconv.Itoa(i))
-			wg.Done()
-		}()
-	}
+	// BEGIN
+	wg.Add(3)
+
+	go func() {
+		work(0)
+		wg.Done()
+	}()
+
+	go func() {
+		work(1)
+		wg.Done()
+	}()
+
+	go func() {
+		work(2)
+		wg.Done()
+	}()
+	// END
 
 	wg.Wait()
-	// END
 }

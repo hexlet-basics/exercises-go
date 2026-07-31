@@ -1,11 +1,11 @@
 package solution
 
+// BEGIN
+
 import (
 	"fmt"
 	"strconv"
 )
-
-// BEGIN
 
 func BuildProfile(name string, age int, rating float64) string {
 	ageStr := strconv.Itoa(age)
