@@ -9,7 +9,7 @@
 Hello, <имя>! You have <число> new messages.
 ```
 
-**Примеры**
+## Примеры
 
 ```go
 BuildGreeting("Ivan", 5) // "Hello, Ivan! You have 5 new messages."

@@ -4,7 +4,7 @@
 "Name: <name>, Age: <age>, Rating: <rating>"
 ```
 
-**Примеры**
+## Примеры
 
 ```go
 fmt.Println(BuildProfile("Alice", 30, 4.73))

@@ -5,7 +5,7 @@
 
 Реализуйте функцию `NewDiscountedProduct(name string, price int, discount int) *Product`, которая возвращает **указатель** на новый товар с учётом скидки `discount` (в процентах). Скидка меньше нуля считается нулевой, больше ста — стопроцентной.
 
-**Пример**
+## Пример
 
 ```go
 p := NewDiscountedProduct("Laptop", 1000, 10)
