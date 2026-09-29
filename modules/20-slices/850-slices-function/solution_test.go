@@ -37,8 +37,8 @@ func TestAddDiscount(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			orig := append([]int(nil), tt.prices...) // копия для проверки
 			result := AddDiscount(tt.prices, tt.discount)
-			assert.Equal(t, tt.expected, result)
-			assert.Equal(t, orig, tt.prices, "original slice should remain unchanged")
+			assert.Equal(t, tt.expected, result, "The prices %v with a %d%% discount should become %v", orig, tt.discount, tt.expected)
+			assert.Equal(t, orig, tt.prices, "The original prices slice should remain unchanged, the function returns a new slice")
 		})
 	}
 }

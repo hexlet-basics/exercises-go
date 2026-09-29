@@ -67,7 +67,7 @@ func TestAreOrderHistoriesEqual(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			result := AreOrderHistoriesEqual(tt.h1, tt.h2)
-			assert.Equal(t, tt.expected, result)
+			assert.Equal(t, tt.expected, result, "AreOrderHistoriesEqual(%#v, %#v) should return %t", tt.h1, tt.h2, tt.expected)
 		})
 	}
 }

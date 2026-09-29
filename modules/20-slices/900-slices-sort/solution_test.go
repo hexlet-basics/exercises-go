@@ -2,6 +2,7 @@
 package solution
 
 import (
+	"slices"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -53,9 +54,10 @@ func TestSortOrdersByCustomerID(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			original := slices.Clone(tt.input)
 			result := SortOrdersByCustomerID(tt.input)
-			assert.Equal(t, tt.expected, result)
-			assert.Equal(t, tt.input, tt.input, "original slice should remain unchanged")
+			assert.Equal(t, tt.expected, result, "Orders should be sorted by CustomerID, and by Price when CustomerID is equal")
+			assert.Equal(t, original, tt.input, "The original orders slice should remain unchanged, the function returns a new slice")
 		})
 	}
 }

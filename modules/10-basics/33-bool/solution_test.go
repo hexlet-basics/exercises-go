@@ -9,9 +9,9 @@ import (
 func TestIsEven(t *testing.T) {
 	a := assert.New(t)
 
-	a.False(IsEven(5))
-	a.True(IsEven(6))
-	a.True(IsEven(0))
-	a.True(IsEven(-2))
-	a.False(IsEven(-3))
+	a.False(IsEven(5), "IsEven(5) should return false")
+	a.True(IsEven(6), "IsEven(6) should return true")
+	a.True(IsEven(0), "IsEven(0) should return true")
+	a.True(IsEven(-2), "IsEven(-2) should return true")
+	a.False(IsEven(-3), "IsEven(-3) should return false")
 }

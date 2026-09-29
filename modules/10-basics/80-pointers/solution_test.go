@@ -22,7 +22,7 @@ func TestDeposit(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			acc := Account{Owner: "Test", Balance: tt.initial}
 			Deposit(&acc, tt.amount)
-			assert.Equal(t, tt.expected, acc.Balance, "Balance mismatch in test case: %s", tt.name)
+			assert.Equal(t, tt.expected, acc.Balance, "After Deposit(&acc, %d) with balance %d the balance should be %d", tt.amount, tt.initial, tt.expected)
 		})
 	}
 }

@@ -24,7 +24,7 @@ func TestNewDiscountedProduct(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			p := NewDiscountedProduct("Test", tt.price, tt.discount)
-			assert.Equal(t, tt.wantPrice, p.Price, "Price for test case '%s' did not match", tt.name)
+			assert.Equal(t, tt.wantPrice, p.Price, "The price %d with a %d%% discount should be %d", tt.price, tt.discount, tt.wantPrice)
 		})
 	}
 }
