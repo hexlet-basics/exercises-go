@@ -8,9 +8,8 @@ import (
 // BEGIN
 
 func BuildProfile(name string, age int, rating float64) string {
-	ageStr := strconv.Itoa(age)
-	ratingStr := fmt.Sprintf("%.1f", rating)
-	return "Name: " + name + ", Age: " + ageStr + ", Rating: " + ratingStr
+	ratingStr := strconv.FormatFloat(rating, 'f', 1, 64)
+	return fmt.Sprintf("Name: %s, Age: %d, Rating: %s", name, age, ratingStr)
 }
 
 // END

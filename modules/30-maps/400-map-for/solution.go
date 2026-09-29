@@ -6,9 +6,9 @@ import "strings"
 
 func CountWords(text string) map[string]int {
 	result := make(map[string]int)
-	words := strings.FieldsSeq(strings.ToLower(text))
+	words := strings.Fields(strings.ToLower(text))
 
-	for word := range words {
+	for _, word := range words {
 		// Удаляем знаки пунктуации с конца и начала
 		word = strings.Trim(word, ".,!?;:")
 		if word != "" {

@@ -2,12 +2,12 @@ package solution
 
 import "slices"
 
-// BEGIN
-
 type Order struct {
 	CustomerID int
 	Price      int
 }
+
+// BEGIN
 
 func SortOrdersByCustomerID(orders []Order) []Order {
 	result := slices.Clone(orders)
