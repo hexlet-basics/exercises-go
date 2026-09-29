@@ -18,3 +18,5 @@ ModifySpaces("hello world", "")        // hello*world
 strings.ReplaceAll("hello world!", "world!", "buddy!") // hello buddy!
 strings.ReplaceAll("one two three", " ", "_") // one_two_three
 ```
+
+Функция возвращает новую строку, а исходная строка остаётся прежней, поэтому результат `ReplaceAll()` нужно вернуть из `ModifySpaces()` или сохранить в переменную.

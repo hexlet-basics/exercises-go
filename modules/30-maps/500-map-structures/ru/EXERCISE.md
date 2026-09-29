@@ -12,9 +12,9 @@ users := map[int]*User{
 }
 
 err := UpdateEmail(users, 1, "alice@newmail.com")
-fmt.Println(users[1].Email) // "alice@newmail.com"
+fmt.Println(users[1].Email) // alice@newmail.com
 fmt.Println(err)            // <nil>
 
 err = UpdateEmail(users, 3, "charlie@mail.com")
-fmt.Println(err)            // "user not found"
+fmt.Println(err)            // user not found
 ```

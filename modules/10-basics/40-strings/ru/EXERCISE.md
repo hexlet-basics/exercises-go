@@ -15,3 +15,8 @@ Hello, <имя>! You have <число> new messages.
 BuildGreeting("Ivan", 5) // "Hello, Ivan! You have 5 new messages."
 BuildGreeting("Hexlet", 0) // "Hello, Hexlet! You have 0 new messages."
 ```
+
+## Подсказки
+
+- Число `count` переводится в строку функцией `strconv.Itoa()`, пакет `strconv` в файле уже подключён.
+- Неиспользованный импорт Go считает ошибкой (`imported and not used`), поэтому пакет, который не понадобился, убирают из `import`.

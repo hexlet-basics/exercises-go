@@ -5,4 +5,5 @@
 ```go
 Double(3) // 6
 Double(8) // 16
+Double(-2) // -4
 ```
