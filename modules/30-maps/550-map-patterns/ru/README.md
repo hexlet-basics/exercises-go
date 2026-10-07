@@ -30,39 +30,58 @@ fmt.Println(lang) // => en
 
 ## Сбор ключей или значений
 
-Чтобы получить список всех ключей карты, используйте `maps.Keys()`:
+Функции `maps.Keys()` и `maps.Values()` возвращают итераторы. Чтобы получить срез ключей или значений, передадим итератор в `slices.Collect()`. Порядок элементов зависит от обхода карты и может меняться между запусками.
 
 ```go
-import "maps"
+package main
 
-keys := maps.Keys(users)
-fmt.Println(keys) // => [alice bob]
+import (
+	"fmt"
+	"maps"
+	"slices"
+)
+
+func main() {
+	users := map[string]int{"alice": 25, "bob": 30}
+	keys := slices.Collect(maps.Keys(users))
+	fmt.Println(keys) // Например, [alice bob]
+}
 ```
 
 Чтобы собрать значения:
 
 ```go
+package main
+
 import (
-  "fmt"
-  "maps"
+	"fmt"
+	"maps"
+	"slices"
 )
 
-values := maps.Values(users)
-fmt.Println(values) // => [25 30]
+func main() {
+	users := map[string]int{"alice": 25, "bob": 30}
+	values := slices.Collect(maps.Values(users))
+	fmt.Println(values) // Например, [25 30]
+}
 ```
 
 Если нужно отсортировать ключи:
 
 ```go
+package main
+
 import (
-  "fmt"
-  "slices"
-  "maps"
+	"fmt"
+	"maps"
+	"slices"
 )
 
-keys := maps.Keys(users)
-slices.Sort(keys)
-fmt.Println(keys) // => [alice bob]
+func main() {
+	users := map[string]int{"alice": 25, "bob": 30}
+	keys := slices.Sorted(maps.Keys(users))
+	fmt.Println(keys) // => [alice bob]
+}
 ```
 
 ## Вложенные карты (инициализация на лету)
