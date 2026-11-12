@@ -1,11 +1,11 @@
 package solution
 
+// BEGIN
+
 import (
 	"fmt"
 	"strconv"
 )
-
-// BEGIN
 
 func BuildProfile(name string, age int, rating float64) string {
 	ratingStr := strconv.FormatFloat(rating, 'f', 1, 64)

@@ -1,11 +1,11 @@
 package solution
 
+// BEGIN
+
 import (
 	"errors"
 	"fmt"
 )
-
-// BEGIN
 
 func GetGrade(scores map[string]int, name string) (string, error) {
 	if score, exists := scores[name]; exists {
