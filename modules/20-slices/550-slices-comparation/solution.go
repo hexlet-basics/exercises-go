@@ -1,8 +1,8 @@
 package solution
 
-import "slices"
-
 // BEGIN
+
+import "slices"
 
 func AreOrderHistoriesEqual(history1, history2 [][]string) bool {
 	// Явно проверяем: один nil, другой пустой

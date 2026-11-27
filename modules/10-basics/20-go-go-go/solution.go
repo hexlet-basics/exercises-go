@@ -1,10 +1,13 @@
 package main
 
+// BEGIN
 import (
 	"fmt"
 	"strconv"
 	"sync"
 )
+
+// END
 
 func main() {
 	// BEGIN

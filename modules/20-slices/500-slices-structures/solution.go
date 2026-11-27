@@ -1,6 +1,9 @@
 package solution
 
+// BEGIN
 import "strings"
+
+// END
 
 type User struct {
 	Name  string

@@ -1,6 +1,9 @@
 package solution
 
+// BEGIN
 import "errors"
+
+// END
 
 type User struct {
 	Name  string

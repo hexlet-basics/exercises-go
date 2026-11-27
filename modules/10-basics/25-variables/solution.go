@@ -1,6 +1,9 @@
 package solution
 
+// BEGIN
 import "fmt"
+
+// END
 
 func PrintBody() {
 	// BEGIN

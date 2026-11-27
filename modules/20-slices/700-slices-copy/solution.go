@@ -1,8 +1,8 @@
 package solution
 
-import "slices"
-
 // BEGIN
+
+import "slices"
 
 func IntsCopy(src []int, maxLen int) []int {
 	if maxLen <= 0 {

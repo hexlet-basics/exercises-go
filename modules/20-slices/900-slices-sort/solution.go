@@ -1,6 +1,9 @@
 package solution
 
+// BEGIN
 import "slices"
+
+// END
 
 type Order struct {
 	CustomerID int

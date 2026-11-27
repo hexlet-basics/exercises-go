@@ -1,10 +1,10 @@
 package solution
 
+// BEGIN
+
 import (
 	"fmt"
 )
-
-// BEGIN
 
 type Config struct {
 	Host *string

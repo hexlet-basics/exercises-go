@@ -1,10 +1,10 @@
 package solution
 
+// BEGIN
+
 import (
 	"strings"
 )
-
-// BEGIN
 
 func ModifySpaces(s, mode string) string {
 	var replacement string

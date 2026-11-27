@@ -1,11 +1,11 @@
 package solution
 
+// BEGIN
+
 import (
 	"strings"
 	"unicode"
 )
-
-// BEGIN
 
 func FilterString(text string, exclude rune) string {
 	var result strings.Builder

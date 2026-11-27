@@ -1,8 +1,8 @@
 package solution
 
-import "strings"
-
 // BEGIN
+
+import "strings"
 
 func CountWords(text string) map[string]int {
 	result := make(map[string]int)
